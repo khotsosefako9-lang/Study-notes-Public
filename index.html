@@ -1,0 +1,920 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Public Economics — Exam Notes</title>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root {
+  --bg: #faf9f6;
+  --text: #1a1a1a;
+  --muted: #6b6b6b;
+  --rule: #c8c4bc;
+  --border: #d8d4cc;
+  --green-bg: #eaf4ec;
+  --green-border: #2a7a3a;
+  --yellow-bg: #fdf6dc;
+  --yellow-border: #c8a400;
+  --red-bg: #fdf0f0;
+  --red-border: #c84040;
+  --blue-bg: #edf3fa;
+  --blue-border: #4080b8;
+}
+* { box-sizing: border-box; margin: 0; padding: 0; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'IBM Plex Sans', sans-serif;
+  font-size: 13.5px;
+  line-height: 1.65;
+  padding: 32px 20px 80px;
+}
+.page { max-width: 860px; margin: 0 auto; }
+
+/* HEADER */
+.doc-header { border-bottom: 2px solid var(--text); padding-bottom: 18px; margin-bottom: 10px; }
+.doc-header h1 { font-family: 'EB Garamond', serif; font-size: 32px; font-weight: 700; letter-spacing: -0.01em; line-height: 1.1; }
+.doc-header .subtitle { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); margin-top: 6px; letter-spacing: 0.04em; }
+.exam-meta { display: flex; gap: 24px; flex-wrap: wrap; padding: 10px 0; border-bottom: 1px solid var(--rule); margin-bottom: 28px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; }
+.meta-item { color: var(--muted); }
+.meta-item strong { color: var(--text); font-weight: 500; }
+
+/* TOC */
+.toc { background: #f5f4f1; border: 1px solid var(--border); border-radius: 3px; padding: 14px 18px; margin-bottom: 32px; }
+.toc-head { font-family: 'IBM Plex Mono', monospace; font-size: 11px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 10px; }
+.toc-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 6px 20px; }
+.toc-item { font-size: 12.5px; }
+.toc-item .toc-ch { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: var(--muted); display: block; }
+
+/* CHAPTER */
+.chapter { margin-bottom: 44px; }
+.chapter-heading { display: flex; align-items: baseline; gap: 12px; margin-bottom: 18px; padding-bottom: 8px; border-bottom: 1.5px solid var(--text); flex-wrap: wrap; }
+.ch-label { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); letter-spacing: 0.06em; text-transform: uppercase; flex-shrink: 0; }
+.ch-title { font-family: 'EB Garamond', serif; font-size: 22px; font-weight: 700; letter-spacing: -0.01em; }
+.ch-flag { margin-left: auto; font-family: 'IBM Plex Mono', monospace; font-size: 10px; padding: 2px 8px; border-radius: 2px; flex-shrink: 0; }
+.flag-nb { background: var(--yellow-bg); color: #7a5c00; border: 1px solid var(--yellow-border); }
+.flag-secc { background: var(--blue-bg); color: #1a3a5c; border: 1px solid var(--blue-border); }
+
+/* SECTION */
+.section { margin-bottom: 22px; }
+.section-title { font-family: 'EB Garamond', serif; font-size: 17px; font-weight: 600; margin-bottom: 8px; }
+.section-title .nb { font-family: 'IBM Plex Mono', monospace; font-size: 10px; color: #7a5c00; background: var(--yellow-bg); border: 1px solid var(--yellow-border); padding: 1px 6px; border-radius: 2px; margin-left: 8px; vertical-align: middle; }
+p { margin-bottom: 8px; }
+hr.rule { border: none; border-top: 1px solid var(--rule); margin: 18px 0; }
+
+/* DEF BOX */
+.def-box { background: var(--green-bg); border-left: 3px solid var(--green-border); padding: 10px 14px; margin: 8px 0 12px; border-radius: 0 3px 3px 0; }
+.def-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--green-border); margin-bottom: 4px; }
+.def-box p { margin: 0; font-size: 13px; }
+
+/* CALLOUT */
+.callout { border-left: 3px solid var(--rule); padding: 10px 14px; margin: 8px 0 12px; background: #f5f4f1; border-radius: 0 3px 3px 0; font-size: 13px; }
+.callout.yellow { border-left-color: var(--yellow-border); background: var(--yellow-bg); }
+.callout.blue { border-left-color: var(--blue-border); background: var(--blue-bg); }
+.callout.red { border-left-color: var(--red-border); background: var(--red-bg); }
+.callout-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin-bottom: 5px; }
+
+/* LISTS */
+ul.bl, ol.bl { padding-left: 0; list-style: none; display: flex; flex-direction: column; gap: 5px; margin-bottom: 10px; }
+ul.bl li, ol.bl li { display: flex; gap: 10px; font-size: 13px; line-height: 1.6; }
+ul.bl li::before { content: '•'; color: var(--muted); flex-shrink: 0; margin-top: 1px; }
+ol.bl { counter-reset: li; }
+ol.bl li { counter-increment: li; }
+ol.bl li::before { content: counter(li) '.'; color: var(--muted); flex-shrink: 0; font-family: 'IBM Plex Mono', monospace; font-size: 11px; margin-top: 2px; min-width: 16px; }
+ul.bl li strong, ol.bl li strong { font-weight: 600; }
+
+/* FORMULA */
+.formula { font-family: 'IBM Plex Mono', monospace; font-size: 12px; background: #f0ede8; border: 1px solid var(--border); padding: 6px 12px; border-radius: 3px; display: inline-block; margin: 4px 0 8px; }
+
+/* GRAPH BOX */
+.graph-box { background: var(--blue-bg); border: 1px solid var(--blue-border); border-radius: 3px; padding: 12px 14px; margin: 10px 0 14px; font-size: 12.5px; }
+.graph-label { font-family: 'IBM Plex Mono', monospace; font-size: 10px; text-transform: uppercase; letter-spacing: 0.08em; color: #1a3a5c; margin-bottom: 6px; }
+.graph-box ul.bl { margin-bottom: 0; }
+
+/* EXAMPLE */
+.example { background: #f7f6f3; border-left: 3px solid var(--rule); padding: 8px 14px; margin: 8px 0 12px; font-size: 12.5px; border-radius: 0 3px 3px 0; color: var(--muted); font-style: italic; }
+.example strong { color: var(--text); font-style: normal; font-weight: 500; }
+
+/* TABLE */
+.cmp-table { width: 100%; border-collapse: collapse; margin: 10px 0 16px; font-size: 12.5px; }
+.cmp-table th { background: var(--text); color: #fff; padding: 8px 12px; text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; }
+.cmp-table td { padding: 8px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.55; }
+.cmp-table tr:nth-child(even) td { background: #f7f6f3; }
+.cmp-table tr:last-child td { border-bottom: none; }
+.cmp-table .rl { font-family: 'IBM Plex Mono', monospace; font-size: 11px; color: var(--muted); white-space: nowrap; }
+
+/* ADV TABLE */
+.adv-table { width: 100%; border-collapse: collapse; margin: 10px 0 14px; font-size: 12.5px; }
+.adv-table th { padding: 7px 12px; text-align: left; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.04em; font-weight: 500; border-bottom: 1.5px solid var(--rule); }
+.adv-table th.adv { color: var(--green-border); }
+.adv-table th.dis { color: var(--red-border); }
+.adv-table td { padding: 7px 12px; border-bottom: 1px solid var(--rule); vertical-align: top; line-height: 1.55; }
+.adv-table tr:last-child td { border-bottom: none; }
+.adv-table td:first-child { border-right: 1px solid var(--rule); }
+
+/* TWO COL */
+.two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 12px; margin: 8px 0 12px; }
+.col-box { border: 1px solid var(--border); border-radius: 3px; overflow: hidden; }
+.col-head { background: var(--bg); padding: 6px 12px; font-family: 'IBM Plex Mono', monospace; font-size: 11px; letter-spacing: 0.05em; color: var(--muted); text-transform: uppercase; border-bottom: 1px solid var(--rule); }
+.col-body { padding: 10px 12px; background: #fff; }
+.col-body ul.bl { margin-bottom: 0; }
+
+@media (max-width: 600px) {
+  .two-col { grid-template-columns: 1fr; }
+  .toc-grid { grid-template-columns: 1fr 1fr; }
+  .doc-header h1 { font-size: 24px; }
+  .ch-title { font-size: 18px; }
+  .exam-meta { gap: 12px; }
+}
+</style>
+</head>
+<body>
+<div class="page">
+
+<div class="doc-header">
+  <h1>Public Economics<br>Exam Study Notes</h1>
+  <div class="subtitle">Chapters 1 · 2 · 3 · 5 · 11 · 12 — Based on Lecturer Scope</div>
+</div>
+
+<div class="exam-meta">
+  <div class="meta-item"><strong>Exam:</strong> 4 June 2026, 14:00–17:00</div>
+  <div class="meta-item"><strong>Section A:</strong> 15 marks — MCQ</div>
+  <div class="meta-item"><strong>Section B:</strong> 35 marks — 7 Short Q</div>
+  <div class="meta-item"><strong>Section C:</strong> 50 marks — 4 Long Q</div>
+</div>
+
+<div class="toc">
+  <div class="toc-head">Contents</div>
+  <div class="toc-grid">
+    <div class="toc-item"><span class="toc-ch">Ch 1</span>Introduction</div>
+    <div class="toc-item"><span class="toc-ch">Ch 2 ★ NB</span>Efficiency &amp; Benchmark</div>
+    <div class="toc-item"><span class="toc-ch">Ch 3 → Sec C</span>Externalities &amp; Public Goods</div>
+    <div class="toc-item"><span class="toc-ch">Ch 5</span>Welfare, Voting &amp; Rent Seeking</div>
+    <div class="toc-item"><span class="toc-ch">Ch 11</span>Tax Theory</div>
+    <div class="toc-item"><span class="toc-ch">Ch 12</span>Tax Burden</div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 1 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 1</span>
+    <span class="ch-title">Introduction to Public Economics</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Views of the Role of Government</div>
+    <p>Two philosophical views explain why government participates in the economy:</p>
+    <ul class="bl">
+      <li><strong>Organic view:</strong> The state is a natural entity; individuals exist to serve the collective. Government has the right to pursue social goals even at the expense of individual freedoms.</li>
+      <li><strong>Mechanistic view:</strong> The state is an artificial creation built by individuals to serve their interests. Government authority comes from the consent of the governed — it exists only as a tool for the individual.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Different Levels of Government</div>
+    <ul class="bl">
+      <li><strong>National (central) government:</strong> Defence, national fiscal policy, social grants, monetary policy (via SARB).</li>
+      <li><strong>Provincial government:</strong> Education, healthcare, social development within provinces.</li>
+      <li><strong>Local (municipal) government:</strong> Service delivery — water, electricity, roads, housing.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Relationship Between the Private and Public Sector <span class="nb">NB — Illustrate &amp; Explain</span></div>
+    <p>The economy operates as a circular flow. Government participates on both sides — as a spender and as a collector of taxes.</p>
+    <ul class="bl">
+      <li><strong>Government injects</strong> money via public expenditure (G) — paying wages, buying goods and services, and making transfer payments.</li>
+      <li><strong>Government withdraws</strong> money via taxation (T) — removing purchasing power from households and firms.</li>
+      <li>National income identity: <span class="formula">Y = C + I + G + (X − M)</span></li>
+    </ul>
+    <div class="callout yellow">
+      <div class="callout-label">Key relationship</div>
+      When G &gt; T, government runs a deficit and must borrow, adding to public debt. When T &gt; G, a surplus exists. Public sector decisions directly shape private sector conditions — taxes reduce disposable income; spending stimulates demand.
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 2 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 2</span>
+    <span class="ch-title">Efficiency &amp; the Benchmark Model</span>
+    <span class="ch-flag flag-nb">★ NB</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Three Types of Efficiency <span class="nb">Illustrate</span></div>
+    <ul class="bl">
+      <li><strong>Allocative efficiency:</strong> Resources are distributed so that no reallocation can make someone better off without making someone else worse off. Achieved when P = MC — the price consumers pay reflects the true marginal cost of production. Society produces the right mix of goods.</li>
+      <li><strong>Productive efficiency:</strong> Goods are produced at the lowest possible cost. The economy operates on its production possibilities frontier — no inputs are wasted and technology is used optimally.</li>
+      <li><strong>Dynamic efficiency:</strong> Resources are allocated efficiently over time, supporting investment, innovation, and technological progress. Not just efficient today, but across future periods.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">The Benchmark (Neoclassical) Model</div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>A theoretical model of a perfectly competitive economy used as a standard against which real-world market outcomes are measured. Under its assumptions, free markets produce a Pareto-efficient equilibrium with no need for government intervention.</p>
+    </div>
+
+    <div class="section-title" style="font-size:15px; margin-top:14px;">Assumptions of the Neoclassical Model <span class="nb">NB</span></div>
+    <ul class="bl">
+      <li><strong>Perfect competition:</strong> Many buyers and sellers; no single agent can influence the market price. Firms are price-takers.</li>
+      <li><strong>Full and perfect information:</strong> All parties have access to the same information at no cost — no information asymmetries.</li>
+      <li><strong>No externalities:</strong> All costs and benefits are captured in market prices; no effects on third parties outside the transaction.</li>
+      <li><strong>No public goods:</strong> All goods are private — rival in consumption and excludable.</li>
+      <li><strong>No merit or demerit goods:</strong> Consumer sovereignty holds — individuals are the best judges of their own welfare. No paternalistic intervention is needed.</li>
+      <li><strong>Rational, self-interested agents:</strong> Consumers maximise utility; firms maximise profit.</li>
+      <li><strong>Perfect factor mobility:</strong> Labour and capital move freely between uses with no barriers.</li>
+    </ul>
+    <div class="callout red">
+      <div class="callout-label">Why it matters</div>
+      When any of these assumptions fails in the real world, a <strong>market failure</strong> occurs — and a potential justification for government intervention arises. The benchmark model defines when markets work perfectly, so we can identify exactly where and why they fail.
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Three Conditions for General Equilibrium</div>
+    <p>For the whole economy to be in efficient equilibrium, three conditions must hold simultaneously:</p>
+    <ol class="bl">
+      <li><strong>Exchange efficiency:</strong> The marginal rate of substitution (MRS) between any two goods must be equal across all consumers. Everyone values the last unit of the two goods in the same ratio: <span class="formula">MRS<sub>A</sub> = MRS<sub>B</sub></span></li>
+      <li><strong>Production efficiency:</strong> The marginal rate of technical substitution (MRTS) between any two inputs must be equal across all producers. Inputs are not wastefully allocated: <span class="formula">MRTS<sub>firm 1</sub> = MRTS<sub>firm 2</sub></span></li>
+      <li><strong>Product mix efficiency (Top-level condition):</strong> The common MRS must equal the marginal rate of transformation (MRT) — what consumers are willing to sacrifice must equal what society gives up to produce more of one good: <span class="formula">MRS = MRT</span></li>
+    </ol>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Three Functions of Government</div>
+    <ol class="bl">
+      <li><strong>Allocation function:</strong> Correct market failures — provide public goods, address externalities, regulate monopolies, and supply merit goods that the market underprovides.</li>
+      <li><strong>Distribution function:</strong> Redistribute income and wealth through taxes, transfers, and spending to achieve a more equitable outcome that the market would not deliver.</li>
+      <li><strong>Stabilisation function:</strong> Use fiscal and monetary policy to maintain full employment, stable prices, and sustainable economic growth across the business cycle.</li>
+    </ol>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Direct vs Indirect Government Intervention</div>
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-head">Direct Intervention</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>Government directly produces or provides goods and services (e.g. public hospitals, Eskom, roads)</li>
+            <li>Regulation and legislation (emission standards, licensing, labour law)</li>
+            <li>Price controls (fuel price caps, rent control)</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-box">
+        <div class="col-head">Indirect Intervention</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>Taxes — reduce production or consumption of harmful goods (e.g. sin taxes)</li>
+            <li>Subsidies — encourage production or consumption of beneficial goods (e.g. education subsidies)</li>
+            <li>Transfer payments — redistribute income (grants, pensions)</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 3 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 3</span>
+    <span class="ch-title">Externalities &amp; Public Goods</span>
+    <span class="ch-flag flag-secc">Section C</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">What is an Externality?</div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>An externality exists when the actions of one producer or consumer directly affect the wellbeing or production of another party, and that effect is <strong>not reflected in market prices</strong>. The party causing the effect is neither compensated nor penalised by the market.</p>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Classification of Externalities</div>
+
+    <table class="cmp-table">
+      <thead><tr><th></th><th>Positive Externality</th><th>Negative Externality</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rl">Definition</td>
+          <td>A benefit conferred on a third party free of charge</td>
+          <td>A cost imposed on a third party without compensation</td>
+        </tr>
+        <tr>
+          <td class="rl">Supply side (Production)</td>
+          <td>MPC &gt; MSC: firm's costs overstate true social cost<br><em>e.g. forestry reduces downstream flooding</em></td>
+          <td>MEC &gt; 0, so MSC &gt; MPC: firm's costs understate true social cost<br><em>e.g. factory pollutes a river</em></td>
+        </tr>
+        <tr>
+          <td class="rl">Demand side (Consumption)</td>
+          <td>MEB &gt; 0, so MSB &gt; MPB: consumers' benefit understates social benefit<br><em>e.g. vaccination reduces community disease risk</em></td>
+          <td>MEB &lt; 0, so MPB &gt; MSB: consumers' benefit overstates social benefit<br><em>e.g. loud music disturbs neighbours</em></td>
+        </tr>
+        <tr>
+          <td class="rl">Market outcome</td>
+          <td>Underproduction / underconsumption</td>
+          <td>Overproduction / overconsumption</td>
+        </tr>
+        <tr>
+          <td class="rl">Correction</td>
+          <td>Pigouvian subsidy = MEB</td>
+          <td>Pigouvian tax = MEC</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout">
+      <div class="callout-label">Key formulas</div>
+      <span class="formula">MSC = MPC + MEC</span>&nbsp;&nbsp;&nbsp;<span class="formula">MSB = MPB + MEB</span>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Technological vs Pecuniary Externalities</div>
+    <ul class="bl">
+      <li><strong>Technological externality:</strong> Directly affects the output or utility of another party through a physical channel (e.g. pollution reducing a fisherman's catch). These are <em>true</em> externalities — they cause market failure and justify government intervention.</li>
+      <li><strong>Pecuniary externality:</strong> Operates through price changes in markets (e.g. a new residential development raising local property prices). Works through market mechanisms — does <em>not</em> constitute market failure and does <em>not</em> justify intervention.</li>
+    </ul>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Externality Graphs <span class="nb">NB — Illustrate &amp; Explain</span></div>
+
+    <div class="graph-box">
+      <div class="graph-label">Negative Production Externality — Graph</div>
+      <ul class="bl">
+        <li>Private equilibrium E₀: Dₚ = MSB meets Sₚ = MPC. Firm only considers private costs — overproduces at too low a price.</li>
+        <li>Adding MEC shifts supply curve up: Sₛ = MSC (social supply).</li>
+        <li>Social optimum E₁: MSC meets MSB — lower output, higher price than E₀.</li>
+        <li>Deadweight loss = welfare triangle between E₀ and E₁ (value lost because Q is too high).</li>
+        <li><strong>Correction:</strong> Pigouvian tax = MEC shifts MPC up to MSC, moving equilibrium from E₀ to E₁.</li>
+      </ul>
+    </div>
+
+    <div class="graph-box">
+      <div class="graph-label">Positive Consumption Externality — Graph</div>
+      <ul class="bl">
+        <li>Private equilibrium E₀: S = MSC meets Dₚ = MPB. Consumers only value private benefit — demand is too low.</li>
+        <li>Adding MEB shifts demand curve up: Dₛ = MSB (social demand).</li>
+        <li>Social optimum E₁: MSB meets MSC — higher output and higher price than E₀.</li>
+        <li>Deadweight loss = welfare triangle between E₀ and E₁ (value not realised because Q is too low).</li>
+        <li><strong>Correction:</strong> Pigouvian subsidy = MEB raises effective demand to MSB, moving equilibrium from E₀ to E₁.</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Solutions to Externalities</div>
+    <ul class="bl">
+      <li><strong>Pigouvian taxes and subsidies:</strong> Tax equal to MEC makes the polluter pay the full social cost — corrects negative externality. Subsidy equal to MEB rewards beneficial activity — corrects positive externality. Named after economist Arthur Pigou.</li>
+      <li><strong>Direct regulation:</strong> Government sets emission standards, quantity limits, or outright bans. Forces firms to internalise costs without using a price mechanism.</li>
+      <li><strong>Tradeable permits (cap-and-trade):</strong> Total pollution level is capped. Permits are issued and firms may buy or sell them. Firms that reduce emissions cheaply sell excess permits; firms that cannot afford reductions buy permits. Achieves the environmental target at the lowest economy-wide cost.</li>
+      <li><strong>Property rights and Coase Theorem:</strong> If property rights are clearly defined and transaction costs are zero, the affected parties can privately negotiate to reach efficiency without government intervention. In practice, transaction costs are usually too high — especially for large-scale externalities like air pollution — limiting the applicability of this solution.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Equilibrium for Public vs Private Goods <span class="nb">NB — Table + Illustrate</span></div>
+
+    <table class="cmp-table">
+      <thead><tr><th></th><th>Private Good</th><th>Public Good</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rl">Characteristics</td>
+          <td>Rival in consumption + excludable</td>
+          <td>Non-rival in consumption + non-excludable</td>
+        </tr>
+        <tr>
+          <td class="rl">Free-rider problem</td>
+          <td>No — consumers must pay to consume</td>
+          <td>Yes — consumers can enjoy the benefit without paying</td>
+        </tr>
+        <tr>
+          <td class="rl">Market demand</td>
+          <td>Horizontal summation of individual demands (ΣQ at each price P)</td>
+          <td>Vertical summation of individual demands (ΣP at each quantity Q) — all consumers consume the same quantity simultaneously</td>
+        </tr>
+        <tr>
+          <td class="rl">Efficiency condition</td>
+          <td>P = MC (each consumer's marginal valuation equals marginal cost)</td>
+          <td>ΣMRS = MC — Samuelson condition: sum of all consumers' marginal valuations equals marginal cost</td>
+        </tr>
+        <tr>
+          <td class="rl">Market provision</td>
+          <td>Markets provide efficiently — excludability allows for pricing</td>
+          <td>Under-provided or not provided at all by markets — free-rider problem means firms cannot recover costs</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 5 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 5</span>
+    <span class="ch-title">Welfare Theory, Voting &amp; Rent Seeking</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">The Pareto Criterion <span class="nb">NB</span></div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>A policy change is Pareto-justified only if it improves the wellbeing of at least one person <strong>without making anyone else worse off</strong>. In practice, almost any real policy creates winners and losers — making the strict Pareto criterion very rarely satisfied.</p>
+    </div>
+
+    <p><strong>Three Pareto-compatible justifications for redistribution:</strong></p>
+    <ol class="bl">
+      <li><strong>Theory of externality:</strong> Giving resources to the poor generates a positive externality for the rich (reduced crime, lower disease spread, more stable society). Redistribution benefits everyone.
+        <div class="example"><strong>Example:</strong> Subsidised education for low-income students raises human capital, reduces poverty and crime — all citizens benefit, making this Pareto-compatible.</div>
+      </li>
+      <li><strong>The insurance motive:</strong> Behind a veil of ignorance — not knowing whether one will be rich or poor — rational individuals would voluntarily choose a social insurance system. Paying taxes while employed in exchange for benefits when unemployed is a deal people would agree to before knowing their fate.
+        <div class="example"><strong>Example:</strong> Workers contribute to the UIF while employed and receive unemployment benefits if they lose their jobs.</div>
+      </li>
+      <li><strong>Altruism:</strong> Wealthier individuals may derive genuine utility from the wellbeing of poorer individuals. If the utility of the poor enters the utility function of the rich, transfers to the poor also improve the welfare of the rich.
+        <div class="example"><strong>Example:</strong> A high-income individual supports taxes that fund child support grants because improved child welfare genuinely increases their own satisfaction.</div>
+      </li>
+    </ol>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Nozick's Entitlement Theory</div>
+    <p>Robert Nozick argues from a libertarian position that individual freedom is the primary social goal. The state may not redistribute wealth to achieve equality — only to rectify a violation of one of his three principles of justice.</p>
+    <ol class="bl">
+      <li><strong>Justice in acquisition:</strong> Individuals may acquire unowned things provided doing so does not place others in a worse position than before.
+        <div class="example"><strong>Example:</strong> Catching fish from an unused, common lake; gathering freely available wood to build furniture.</div>
+      </li>
+      <li><strong>Justice in transfer:</strong> Things may be voluntarily transferred between individuals. If the original holding was justly acquired and the transfer was voluntary, the new holding is just.
+        <div class="example"><strong>Example:</strong> Giving a friend a birthday gift; selling an old phone at a mutually agreed price.</div>
+      </li>
+      <li><strong>Rectification of injustice:</strong> If either principle above was violated — an unjust acquisition or an involuntary transfer — redistribution to correct that wrong is justified.
+        <div class="example"><strong>Example:</strong> A stolen bicycle must be returned to its rightful owner. Land expropriation without compensation requires rectification.</div>
+      </li>
+    </ol>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Social Welfare Functions</div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>A social welfare function (SWF) aggregates individual utilities into a single measure of social welfare, allowing different distributions of utility across society to be ranked as more or less desirable.</p>
+    </div>
+
+    <table class="cmp-table">
+      <thead><tr><th>Cardinal (Additive / Utilitarian) SWF</th><th>Ordinal SWF</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><span class="formula">W = U<sub>A</sub> + U<sub>B</sub></span></td>
+          <td><span class="formula">W = W(U<sub>A</sub>, U<sub>B</sub>)</span></td>
+        </tr>
+        <tr>
+          <td>Assumes utility is measurable on the same scale and can be directly added across individuals. Also called the Benthamite or utilitarian SWF. Allows interpersonal utility comparison.</td>
+          <td>Only requires that social states can be ranked from lower to higher welfare. Does not require interpersonal utility comparison or that utility is measured in absolute terms.</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <p><strong>Optimal social welfare</strong> is achieved at the point on the community's utility possibility curve (QR) that is tangent to the highest attainable social welfare contour (W curve) — point H. At H, society cannot reach a higher welfare contour without going outside the feasible set.</p>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">The Rawlsian Welfare Function</div>
+    <p>John Rawls argued that behind a <em>veil of ignorance</em> — where no one knows their position in society — rational people would choose social rules that protect the worst-off member. This gives rise to the <strong>maximin</strong> welfare function:</p>
+    <div class="formula">W = Minimum(U<sub>A</sub>, U<sub>B</sub>)</div>
+    <p>Social welfare is determined by the <strong>lowest individual utility</strong>, not the sum. To increase W, you must improve the situation of the person with the minimum utility. Raising everyone else's utility has no effect on social welfare until the minimum is raised.</p>
+
+    <table class="adv-table">
+      <thead><tr><th class="adv">Advantages</th><th class="dis">Disadvantages</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Protects the most vulnerable — the worst-off person's situation directly determines overall social welfare.</td>
+          <td>Ignores the wellbeing of everyone except the worst-off. Improvements for all others count for nothing.</td>
+        </tr>
+        <tr>
+          <td>Provides a principled, fair basis for redistribution — most people would agree to it from behind a veil of ignorance.</td>
+          <td>May justify very large sacrifices by many people to achieve even a small gain for the poorest person.</td>
+        </tr>
+        <tr>
+          <td>Avoids the aggregation problem of utilitarianism — does not allow the suffering of the poor to be offset by large gains to the rich.</td>
+          <td>Practically difficult — identifying and measuring the minimum utility person is a major challenge.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Voting Rules <span class="nb">NB — 50% + 1 voter</span></div>
+    <ul class="bl">
+      <li><strong>Dictatorial rule:</strong> One individual makes all decisions — only their preferences determine the outcome.</li>
+      <li><strong>Unanimity rule:</strong> All members must agree before a decision passes. Protects every individual but is extremely slow and prone to veto by even a single voter.</li>
+      <li><strong>Majority rule (50% + 1):</strong> A decision passes if more than half agree. The most widely used democratic rule.</li>
+      <li><strong>Plurality rule (highest count):</strong> The option receiving the most votes wins, even without an outright majority.</li>
+    </ul>
+
+    <p><strong>Advantages of majority rule over unanimity:</strong></p>
+    <ol class="bl">
+      <li><strong>Speed and cost:</strong> Reaching majority approval requires far less time and negotiation resources than achieving unanimous consent.</li>
+      <li><strong>Prevents minority veto:</strong> Under unanimity, a single voter can block any proposal regardless of its merits. Majority rule prevents a small minority from holding the majority hostage.</li>
+    </ol>
+
+    <p style="margin-top:10px;"><strong>Median Voter Theorem:</strong> The median voter is the voter who sits exactly in the middle of the preference distribution — half prefer more of the good, half prefer less. Under majority rule, the outcome preferred by the median voter always wins. Any proposal deviating from the median can be beaten by a proposal closer to it.</p>
+    <div class="example"><strong>Example:</strong> Five voters prefer quantities of 2, 4, 6, 8, and 10 units respectively. The median voter prefers 6 units — this is the majority-rule outcome. A proposal of 7 units will lose to a proposal of 6 units.</div>
+
+    <table class="adv-table" style="margin-top:10px;">
+      <thead><tr><th class="adv">Advantages of Median Voter Rule</th><th class="dis">Disadvantages</th></tr></thead>
+      <tbody>
+        <tr>
+          <td>Prevents extremes — outcome reflects the centre of the population's preferences, not the fringe.</td>
+          <td>Not all politicians are vote-maximisers — some pursue the public interest rather than the median voter strategy.</td>
+        </tr>
+        <tr>
+          <td>Easy to apply — rank voters by preference and identify the middle one.</td>
+          <td>Identifying the median voter in reality is often impractical; preferences on multiple issues are hard to order along a single dimension.</td>
+        </tr>
+        <tr>
+          <td>Produces stable outcomes when preferences are single-peaked.</td>
+          <td>Assumes all voters are rational and turn out to vote — neither holds reliably in practice.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Cost of Democratic Decision-Making <span class="nb">NB — Illustrate &amp; Explain</span></div>
+
+    <div class="graph-box">
+      <div class="graph-label">Optimal Majority Graph — Description</div>
+      <ul class="bl">
+        <li><strong>X-axis:</strong> Percentage of people required to agree (0% to 100%).</li>
+        <li><strong>Y-axis:</strong> Costs (in money, time, or welfare).</li>
+        <li><strong>Decision-making costs (C<sub>D</sub>):</strong> The time, effort, and resources needed to reach collective agreement. Slopes <em>upward</em> from left — the higher the required majority threshold, the harder and more costly it becomes to reach agreement.</li>
+        <li><strong>External costs (C<sub>E</sub>):</strong> The welfare cost imposed on individuals who are outvoted and must live with a decision that harms them. Slopes <em>downward</em> from left — as the required majority rises, fewer people are outvoted and external costs fall.</li>
+        <li><strong>Total costs (C<sub>T</sub> = C<sub>D</sub> + C<sub>E</sub>):</strong> Adding the two cost curves vertically produces a U-shaped total cost curve. The minimum point of C<sub>T</sub> — at M* on the x-axis — is the <strong>optimal majority</strong> for that particular public decision.</li>
+        <li>M* is generally above 50% (simple majority) but below 100% (unanimity) — the exact position depends on the issue.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Arrow's Impossibility Theorem</div>
+    <div class="def-box">
+      <div class="def-label">Key Result</div>
+      <p>Kenneth Arrow proved that no voting rule — including majority voting — can simultaneously satisfy all five minimum ethical conditions required for an acceptable social choice rule. Every voting system must violate at least one of these conditions. Collective decision-making is inherently imperfect.</p>
+    </div>
+
+    <p><strong>The five conditions:</strong></p>
+    <ol class="bl">
+      <li><strong>Rationality:</strong> Both individuals and the community must have complete, well-defined preferences — able to prefer X to Y, Y to X, or be indifferent between them. No undefined or inconsistent rankings are allowed.</li>
+      <li><strong>Transitivity:</strong> The community's ranking must be logically consistent. If society prefers X to Y and Y to Z, it must also prefer X to Z. Without this, collective choices can cycle endlessly — the Condorcet paradox.</li>
+      <li><strong>Non-dictatorship:</strong> No single individual's preference should automatically determine the social outcome. The result must reflect the group's preferences, not just one person's.</li>
+      <li><strong>Pareto principle (unanimity):</strong> If every single individual prefers X to Y, the social ranking must also place X above Y. The group must respect unanimous individual preferences.</li>
+      <li><strong>Independence of irrelevant alternatives (IIA):</strong> The social ranking of X vs Y should depend only on how individuals rank X versus Y — not on how they rank a third option Z. Introducing or removing Z should not change the outcome between X and Y.</li>
+    </ol>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Politicians vs Bureaucrats</div>
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-head">Politicians</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>Vote-maximising — policy decisions target the median voter to win elections</li>
+            <li>Short-term focus — shaped by electoral cycles, not long-run efficiency</li>
+            <li>May pursue popular policies over socially optimal ones</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-box">
+        <div class="col-head">Bureaucrats (Niskanen Model)</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>Budget-maximising — larger budget = more power, status, and patronage</li>
+            <li>Have an information advantage over politicians due to technical expertise</li>
+            <li>Tend to oversupply public output and over-expand government</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Rent Seeking <span class="nb">Define + Problems + Graph</span></div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>Rent seeking is the use of political influence to gain economic benefits <strong>without producing value</strong>. Instead of creating new wealth, rent seekers redistribute existing wealth in their favour by manipulating the political or regulatory environment. It is legal, but socially wasteful.</p>
+    </div>
+
+    <div class="example"><strong>Example:</strong> A firm spends R5 million lobbying government for a contract worth R6 million. Profitable for the firm — but from society's view, R5 million in real resources were consumed without producing any new goods or services.</div>
+
+    <p style="margin-top:10px;"><strong>Problems caused by rent seeking in the economy:</strong></p>
+    <ul class="bl">
+      <li><strong>Wastes resources:</strong> Time, money, and effort spent lobbying or seeking political favour could have been directed toward productive activities. No new goods or services are created from these expenditures.</li>
+      <li><strong>Creates inefficiency:</strong> When firms find it more profitable to lobby for monopoly rights, subsidies, or tariff protection than to innovate and compete, productive incentives are fundamentally distorted.</li>
+      <li><strong>Reduces total welfare:</strong> Resources flow from value-creating activities toward redistribution games, shrinking the total economic pie rather than expanding it.</li>
+      <li><strong>Encourages corruption:</strong> Government institutions become targets for capture — officials make decisions based on who lobbies hardest rather than on merit or public interest.</li>
+      <li><strong>Amplifies deadweight loss:</strong> The social cost of a monopoly is not limited to the standard welfare triangle. When firms spend real resources to acquire or maintain the monopoly position, the total social cost can equal the full monopoly profit rectangle plus the standard deadweight loss triangle.</li>
+    </ul>
+
+    <div class="graph-box">
+      <div class="graph-label">Rent-Seeking Graph — Description</div>
+      <ul class="bl">
+        <li>Standard monopoly diagram: P on y-axis, Q on x-axis. Downward-sloping demand (D = AR), MR below D, horizontal MC = AC.</li>
+        <li>Profit-maximising output: Q<sub>m</sub> where MR = MC; price P<sub>m</sub> on the demand curve.</li>
+        <li><strong>Monopoly profit rectangle</strong> = (P<sub>m</sub> − AC) × Q<sub>m</sub> — this is the rent being sought.</li>
+        <li><strong>Standard deadweight loss triangle</strong> = surplus lost between Q<sub>m</sub> and the competitive quantity Q<sub>c</sub>.</li>
+        <li><strong>With rent seeking:</strong> resources equal to the monopoly profit rectangle are consumed by lobbying costs. Total social cost = monopoly profit rectangle + deadweight loss triangle — potentially much larger than the standard monopoly welfare loss.</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 11 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 11</span>
+    <span class="ch-title">Tax Theory — Sources &amp; Classification</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Sources of Finance for Government</div>
+    <ul class="bl">
+      <li><strong>Taxes:</strong> Compulsory payments by households and firms — the primary source of government revenue in most countries.</li>
+      <li><strong>User charges and fees:</strong> Payments for specific government services consumed (e.g. toll roads, tuition at public universities, court fees).</li>
+      <li><strong>Borrowing (public debt):</strong> Government issues bonds to raise funds; represents deferred taxation — future taxpayers will service the debt.</li>
+      <li><strong>Money creation (seigniorage):</strong> The central bank creates money; effectively a tax on money holders because it erodes the purchasing power of existing money holdings through inflation.</li>
+      <li><strong>Grants and transfers:</strong> Foreign aid, and intergovernmental transfers from national to provincial and local government (e.g. equitable share allocations in South Africa).</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Three Tax Systems</div>
+    <table class="cmp-table">
+      <thead><tr><th>System</th><th>Definition</th><th>Average Tax Rate (ATR)</th><th>Example</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Progressive</strong></td>
+          <td>Higher income earners pay a higher proportion of income in tax</td>
+          <td>Rises as income rises</td>
+          <td>SA personal income tax brackets (18%–45%)</td>
+        </tr>
+        <tr>
+          <td><strong>Proportional (Flat)</strong></td>
+          <td>All income earners pay the same percentage of income in tax</td>
+          <td>Constant at all income levels</td>
+          <td>Flat tax proposals; corporate income tax rate</td>
+        </tr>
+        <tr>
+          <td><strong>Regressive</strong></td>
+          <td>Lower income earners pay a higher proportion of income in tax</td>
+          <td>Falls as income rises</td>
+          <td>Effect of VAT on low-income households (spend a higher share of income on consumption)</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">General vs Selective Taxes</div>
+    <ul class="bl">
+      <li><strong>General tax:</strong> Applied uniformly to all goods, services, or income. Does not distort relative prices between different goods — no substitution effect between goods. Approaches tax neutrality.</li>
+      <li><strong>Selective tax:</strong> Applied only to specific goods or activities (e.g. excise tax on alcohol, tobacco, fuel). Changes relative prices between taxed and untaxed goods — creates substitution effects and therefore excess burden (deadweight loss).</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Specific vs Ad Valorem Tax</div>
+    <div class="two-col">
+      <div class="col-box">
+        <div class="col-head">Specific Tax</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>A fixed rand/currency amount per unit, regardless of the price of the good</li>
+            <li>e.g. R5 per litre of fuel, regardless of whether fuel costs R20 or R25 per litre</li>
+            <li>Shifts supply curve upward by a fixed (parallel) amount</li>
+          </ul>
+        </div>
+      </div>
+      <div class="col-box">
+        <div class="col-head">Ad Valorem Tax</div>
+        <div class="col-body">
+          <ul class="bl">
+            <li>A percentage of the price of the good</li>
+            <li>e.g. 15% VAT — higher-priced goods yield more tax revenue per unit</li>
+            <li>Shifts supply curve by a percentage — the gap between supply curves widens as price increases</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Direct vs Indirect Tax</div>
+    <ul class="bl">
+      <li><strong>Direct tax:</strong> Levied directly on the person or entity legally and economically intended to bear it. The tax burden cannot easily be shifted to others. Examples: personal income tax, corporate income tax, capital gains tax, estate duty.</li>
+      <li><strong>Indirect tax:</strong> Collected by an intermediary (seller or producer) who passes the burden on to the final consumer through higher prices. Examples: VAT, excise duties on alcohol and tobacco, customs duties.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Criteria for a Good Tax <span class="nb">NB</span></div>
+    <ul class="bl">
+      <li><strong>Equity (fairness):</strong> People in similar situations pay similar taxes (horizontal equity); people with greater ability to pay contribute more (vertical equity).</li>
+      <li><strong>Efficiency:</strong> Minimises distortion of economic behaviour and excess burden — people and firms should not change productive decisions primarily to avoid the tax.</li>
+      <li><strong>Simplicity:</strong> Easy to understand, calculate, and comply with. Reduces compliance costs and administrative burden.</li>
+      <li><strong>Revenue adequacy:</strong> Raises sufficient funds to finance the required level of public expenditure.</li>
+      <li><strong>Flexibility:</strong> Responds automatically to changing economic conditions (e.g. a progressive income tax acts as an automatic stabiliser — tax revenue falls in recessions, rises in booms).</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Ability to Pay — Horizontal &amp; Vertical Equity</div>
+    <ul class="bl">
+      <li><strong>Horizontal equity:</strong> People with the same income or economic capacity should pay the same amount of tax. Equals must be treated equally — two people earning R500,000 per year should face the same tax liability.</li>
+      <li><strong>Vertical equity:</strong> People with different incomes or economic capacity should pay different amounts. Those with greater ability to pay should pay more — both in absolute terms and as a proportion of income. This is the primary justification for progressive taxation.</li>
+    </ul>
+  </div>
+</div>
+
+
+<!-- ═══════════════ CH 12 ═══════════════ -->
+<div class="chapter">
+  <div class="chapter-heading">
+    <span class="ch-label">Chapter 12</span>
+    <span class="ch-title">Tax Burden &amp; Excess Burden</span>
+  </div>
+
+  <div class="section">
+    <div class="section-title">Normal (General) Burden of Tax</div>
+    <p>Any tax reduces real income and welfare — this is the unavoidable normal burden of taxation. When a general tax affects all goods equally, it creates only an <strong>income effect</strong> — consumers are poorer overall but do not substitute between goods because relative prices are unchanged.</p>
+    <ul class="bl">
+      <li>Relative prices between goods remain unchanged — no distortion in consumption or production choices.</li>
+      <li>No substitution effect → no behavioural distortion → no excess burden.</li>
+      <li>The normal burden equals exactly the revenue collected by government — welfare lost equals revenue raised.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Excess Burden (Deadweight Loss) of a Selective Tax <span class="nb">NB — Illustrate</span></div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>The excess burden of a tax is the <strong>loss of welfare over and above the tax revenue collected</strong>. It arises because a selective tax distorts relative prices, inducing consumers and producers to change their behaviour in ways that reduce total welfare without generating additional government revenue.</p>
+    </div>
+    <ul class="bl">
+      <li>A selective tax on one good raises its relative price compared to untaxed goods — consumers substitute away from the taxed good toward untaxed alternatives.</li>
+      <li>This substitution causes a welfare loss that exceeds the revenue raised — the gap is the excess burden, represented by the deadweight loss triangle on a supply-demand diagram.</li>
+      <li><strong>Excess burden increases with:</strong> (1) the square of the tax rate — doubling the tax more than doubles the excess burden; and (2) the price elasticity of demand and supply — the more elastic the market, the larger the quantity response and the greater the deadweight loss from the same tax rate.</li>
+    </ul>
+
+    <div class="graph-box">
+      <div class="graph-label">Excess Burden — Selective Tax Graph</div>
+      <ul class="bl">
+        <li>Before tax: equilibrium at E₀ (P₀, Q₀). Consumer surplus = area above P₀ below the demand curve.</li>
+        <li>After selective tax: supply shifts up by the tax amount → new equilibrium E₁ (P₁, Q₁) where Q₁ &lt; Q₀ and P₁ &gt; P₀.</li>
+        <li>Tax revenue = tax per unit × Q₁ = rectangle between the two supply curves up to quantity Q₁.</li>
+        <li>Deadweight loss = welfare triangle to the right of Q₁ — value that consumers and producers lost that government did not collect as revenue. This is the pure social waste from the tax-induced distortion.</li>
+      </ul>
+    </div>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Tax Neutrality</div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>A tax is <strong>neutral</strong> if it causes no excess burden — it collects revenue without distorting relative prices or changing economic behaviour. A neutral tax imposes a welfare loss exactly equal to (and no greater than) the revenue collected.</p>
+    </div>
+    <ul class="bl">
+      <li>General taxes approach neutrality — they affect all goods uniformly, leaving relative prices unchanged.</li>
+      <li>Selective taxes are non-neutral by definition — they alter relative prices and induce substitution.</li>
+      <li>Tax neutrality is the ideal from an efficiency standpoint, but real-world taxes always involve trade-offs between neutrality, equity, revenue adequacy, and other objectives.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Lump Sum Tax <span class="nb">NB — Illustrate &amp; Compare</span></div>
+    <div class="def-box">
+      <div class="def-label">Definition</div>
+      <p>A lump sum tax is a fixed amount that a person must pay <strong>regardless of their behaviour</strong> — it does not change with income, spending, or any economic decision the person makes. Because it is unavoidable and independent of behaviour, it creates <strong>no substitution effect</strong>.</p>
+    </div>
+    <ul class="bl">
+      <li>Only an income effect — the taxpayer is poorer in absolute terms but does not alter their relative consumption choices in response.</li>
+      <li>No distortion of relative prices → no excess burden → Pareto-efficient from a distortion standpoint.</li>
+      <li><strong>Limitations in practice:</strong> Highly regressive (the same fixed amount is a larger burden on low-income earners); ignores ability to pay; politically unpopular; practically difficult to implement in a fair and administrable way.</li>
+    </ul>
+  </div>
+
+  <hr class="rule">
+
+  <div class="section">
+    <div class="section-title">Lump Sum Tax vs Selective Tax — Comparison <span class="nb">Key Diagram</span></div>
+
+    <table class="cmp-table">
+      <thead><tr><th></th><th>Lump Sum Tax</th><th>Selective Tax (same revenue)</th></tr></thead>
+      <tbody>
+        <tr>
+          <td class="rl">Budget line</td>
+          <td>Parallel inward shift — relative prices between goods unchanged</td>
+          <td>Rotates inward on the taxed good's axis — relative price of taxed good rises</td>
+        </tr>
+        <tr>
+          <td class="rl">Effects</td>
+          <td>Income effect only</td>
+          <td>Income effect + substitution effect</td>
+        </tr>
+        <tr>
+          <td class="rl">Indifference curve</td>
+          <td>Consumer reaches a lower IC, but tangency point preserves the optimal relative consumption bundle</td>
+          <td>Consumer is pushed to an even lower IC than under the lump sum — the substitution effect imposes an additional welfare loss</td>
+        </tr>
+        <tr>
+          <td class="rl">Excess burden</td>
+          <td>None — welfare loss = revenue collected exactly</td>
+          <td>Positive — welfare loss exceeds revenue collected; the gap is the excess burden</td>
+        </tr>
+        <tr>
+          <td class="rl">Efficiency</td>
+          <td>Pareto-efficient — no behavioural distortion</td>
+          <td>Not Pareto-efficient — distorts consumption and production decisions</td>
+        </tr>
+        <tr>
+          <td class="rl">Equity</td>
+          <td>Highly regressive — ignores ability to pay; equal burden in rand terms on rich and poor alike</td>
+          <td>Can be designed to be progressive, proportional, or regressive depending on which goods are taxed</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <div class="callout yellow">
+      <div class="callout-label">Key takeaway</div>
+      For the same amount of revenue raised, a lump sum tax leaves the consumer better off than a selective tax. The selective tax imposes an additional welfare cost — the excess burden — because it distorts relative prices and forces consumers onto a lower indifference curve than is necessary to collect that revenue.
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<div style="border-top: 1.5px solid var(--text); padding-top: 14px; margin-top: 20px; display:flex; justify-content:space-between; flex-wrap:wrap; gap:8px;">
+  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);">Public Economics — Exam 4 June 2026 · Ch 1, 2, 3, 5, 11, 12</span>
+  <span style="font-family:'IBM Plex Mono',monospace; font-size:11px; color:var(--muted);">★ NB = High Priority &nbsp;|&nbsp; Sec C = Long Question</span>
+</div>
+
+</div>
+</body>
+</html>
