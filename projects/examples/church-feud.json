@@ -1,0 +1,106 @@
+{
+  "title": "Church Feud",
+  "round": "Round 1",
+  "question": "Name one of Jesus' twelve disciples.",
+  "durationInSeconds": 40,
+  "teams": [
+    "Team Grace",
+    "Team Faith"
+  ],
+  "layout": "split",
+  "captions": [
+    {
+      "text": "Captions",
+      "start": 1.0,
+      "end": 1.28
+    },
+    {
+      "text": "will",
+      "start": 1.32,
+      "end": 1.6
+    },
+    {
+      "text": "sit",
+      "start": 1.64,
+      "end": 1.92
+    },
+    {
+      "text": "right",
+      "start": 1.96,
+      "end": 2.24
+    },
+    {
+      "text": "here",
+      "start": 2.28,
+      "end": 2.56
+    }
+  ],
+  "answers": [
+    {
+      "a": "Peter",
+      "pts": 32,
+      "at": 5
+    },
+    {
+      "a": "John",
+      "pts": 18,
+      "at": 9
+    },
+    {
+      "a": "Judas",
+      "pts": 14,
+      "at": 30
+    },
+    {
+      "a": "Thomas",
+      "pts": 10,
+      "at": 15
+    },
+    {
+      "a": "Matthew",
+      "pts": 9,
+      "at": 34,
+      "counts": false
+    },
+    {
+      "a": "James",
+      "pts": 7,
+      "at": 21
+    },
+    {
+      "a": "Andrew",
+      "pts": 6,
+      "at": 35,
+      "counts": false
+    },
+    {
+      "a": "Philip",
+      "pts": 4,
+      "at": 36,
+      "counts": false
+    }
+  ],
+  "strikes": [
+    12,
+    18,
+    25
+  ],
+  "awards": [
+    {
+      "at": 31.5,
+      "team": 1
+    }
+  ],
+  "stamps": [
+    {
+      "at": 26.2,
+      "text": "Steal!",
+      "tone": "gold"
+    },
+    {
+      "at": 31,
+      "text": "Stolen!",
+      "tone": "green"
+    }
+  ]
+}
