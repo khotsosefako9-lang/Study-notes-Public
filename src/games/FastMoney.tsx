@@ -13,8 +13,10 @@ type Answer = { a: string; pts: number; at: number; ptsAt: number }; // pts 0 = 
 export type FastMoneyProps = Common & {
   names: [string, string]; // players, or teams such as ["Ladies", "Guys"]
   subtitle?: string; // e.g. "(Headphones on)"
+  subtitleUntil?: number; // hide the subtitle once viewers know the rules
   goal?: number; // set for the shared-goal version; leave out for team vs team
   rows: { q?: string; qAt?: number; p1?: Answer; p2?: Answer }[]; // five questions or matchups
+  boardTop?: number; // push the board down when players sit low in the frame
   coverP1?: [number, number]; // optional: hide Player 1's answers while Player 2 plays, like the show
   timers?: { start: number; seconds: number; until?: number }[]; // until: hide early if they finish before time runs out
 };
@@ -29,13 +31,13 @@ const Cell: React.FC<{ t: number; a?: Answer; covered: boolean }> = ({ t, a, cov
     <div style={{ display: "flex", gap: 8, flex: 1, minWidth: 0 }}>
       <div
         style={{
-          flex: 1, minWidth: 0, height: 70, borderRadius: 14, background: C.slot, display: "flex", alignItems: "center",
+          flex: 1, minWidth: 0, height: 60, borderRadius: 14, background: C.slot, display: "flex", alignItems: "center",
           padding: "0 18px", position: "relative", overflow: "hidden", border: "2px solid rgba(245,179,53,.25)",
         }}
       >
         <span
           style={{
-            fontFamily: FONT.display, fontWeight: 700, fontSize: 34, color: C.cream, whiteSpace: "nowrap",
+            fontFamily: FONT.display, fontWeight: 700, fontSize: 32, color: C.cream, whiteSpace: "nowrap",
             overflow: "hidden", textOverflow: "ellipsis", opacity: shown, transform: `translateX(${(1 - shown) * -20}px)`,
           }}
         >
@@ -45,7 +47,7 @@ const Cell: React.FC<{ t: number; a?: Answer; covered: boolean }> = ({ t, a, cov
       </div>
       <div
         style={{
-          width: 86, height: 70, borderRadius: 14, display: "grid", placeItems: "center",
+          width: 86, height: 60, borderRadius: 14, display: "grid", placeItems: "center",
           background: miss ? C.bad : pts > 0 ? C.grad : C.slot, border: "2px solid rgba(245,179,53,.25)",
           fontFamily: FONT.display, fontWeight: 800, fontSize: 36, color: miss ? "#fff" : C.ink,
           transform: `scale(${pts > 0 ? 1 + 0.12 * Math.sin(Math.PI * Math.min(1, pts)) : 1})`,
@@ -59,6 +61,7 @@ const Cell: React.FC<{ t: number; a?: Answer; covered: boolean }> = ({ t, a, cov
 
 export const FastMoney: React.FC<FastMoneyProps> = (p) => {
   const t = useSeconds();
+  const top = p.boardTop ?? BOARD.top;
   const covered = !!p.coverP1 && t >= p.coverP1[0] && t < p.coverP1[1];
   const s1 = Math.round(p.rows.reduce((s, r) => s + counted(t, r.p1), 0));
   const s2 = Math.round(p.rows.reduce((s, r) => s + counted(t, r.p2), 0));
@@ -72,7 +75,7 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
   return (
     <AbsoluteFill style={{ background: C.night }}>
       <Footage video={p.video} position={p.videoPosition} />
-      <BoardShade />
+      <BoardShade top={top} />
       <TitleBar title={p.title} />
       {q?.q && (
         <div style={{ position: "absolute", top: 262, left: 70, right: 70, display: "flex", justifyContent: "center", opacity: qk, transform: `translateY(${(1 - qk) * -16}px)` }}>
@@ -85,15 +88,15 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
         </div>
       )}
 
-      <Captions words={p.captions} y={BOARD.top - 120} />
+      <Captions words={p.captions} y={p.captionY ?? top - 120} />
 
       {timer && (
-        <div style={{ position: "absolute", top: BOARD.top - 150, right: 60 }}>
+        <div style={{ position: "absolute", top: top - 150, right: 60 }}>
           <Timer t={t} start={timer.start} seconds={timer.seconds} />
         </div>
       )}
 
-      <Panel style={{ top: BOARD.top, left: BOARD.left, width: BOARD.width, height: BOARD.height }}>
+      <Panel style={{ top, left: BOARD.left, width: BOARD.width }}>
         <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
           {[p.names[0], p.names[1]].map((n, i) => (
             <div key={i} style={{ flex: 1, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0 8px" }}>
@@ -130,7 +133,7 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
             {[s1, s2].map((v, i) => {
               const lead = v > [s1, s2][1 - i];
               return (
-                <div key={i} style={{ flex: 1, height: 70, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 22px", background: lead ? C.grad : C.slot, border: "2px solid rgba(245,179,53,.3)" }}>
+                <div key={i} style={{ flex: 1, height: 64, borderRadius: 16, display: "flex", alignItems: "center", justifyContent: "space-between", padding: "0 22px", background: lead ? C.grad : C.slot, border: "2px solid rgba(245,179,53,.3)" }}>
                   <span style={{ fontFamily: FONT.display, fontWeight: 800, fontSize: 32, color: lead ? C.ink : C.cream }}>Total</span>
                   <span style={{ fontFamily: FONT.display, fontWeight: 900, fontSize: 46, color: lead ? C.ink : C.gold }}>{v}</span>
                 </div>
@@ -140,12 +143,12 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
         )}
       </Panel>
 
-      {p.subtitle && (
-        <div style={{ position: "absolute", top: BOARD.top - 46, width: "100%", textAlign: "center", fontFamily: FONT.body, fontWeight: 800, fontSize: 30, color: C.cream, textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>
+      {p.subtitle && t < (p.subtitleUntil ?? Infinity) && (
+        <div style={{ position: "absolute", top: top - 46, width: "100%", textAlign: "center", fontFamily: FONT.body, fontWeight: 800, fontSize: 30, color: C.cream, textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>
           {p.subtitle}
         </div>
       )}
-      <Stamps stamps={p.stamps} y={BOARD.top + BOARD.height / 2} />
+      <Stamps stamps={p.stamps} y={top + 240} />
     </AbsoluteFill>
   );
 };

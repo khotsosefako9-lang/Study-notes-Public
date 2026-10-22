@@ -15,5 +15,6 @@ export type Common = {
   durationInSeconds: number;
   title: string;
   captions?: Word[];
+  captionY?: number; // centre line of the captions; move them off faces for low-seated shots
   stamps?: Stamp[];
 };

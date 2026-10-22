@@ -1,0 +1,29 @@
+# Fast Money, Ladies vs Guys, 21 Oct 2026. <file> <start> <end> (source seconds)
+# Hook: matchup 5
+raw/2026-10-21/IMG_3074a.mov 34.25 36.2
+# Matchup 1: book of the Old Testament (IMG_3071)
+raw/2026-10-21/IMG_3071.MOV 2.75 5.2
+raw/2026-10-21/IMG_3071.MOV 7.7 9.1
+raw/2026-10-21/IMG_3071.MOV 57.8 59.9
+raw/2026-10-21/IMG_3071.MOV 76.8 80.6
+raw/2026-10-21/IMG_3071.MOV 83.4 85.1
+# Matchup 2: something Jesus called himself (IMG_3072b)
+raw/2026-10-21/IMG_3072b.mov 34.4 38.4
+raw/2026-10-21/IMG_3072b.mov 39.2 40.9
+raw/2026-10-21/IMG_3072b.mov 43.3 45.8
+raw/2026-10-21/IMG_3072b.mov 70.9 72.8
+# Matchup 3: something you'd find in a church (IMG_3072a)
+raw/2026-10-21/IMG_3072a.mov 16.6 19.9
+raw/2026-10-21/IMG_3072a.mov 22.6 23.9
+raw/2026-10-21/IMG_3072a.mov 46.2 49.1
+raw/2026-10-21/IMG_3072a.mov 57.1 59.3
+# Matchup 4: a king in the Bible (IMG_3074b)
+raw/2026-10-21/IMG_3074b.mov 8.1 10.1
+raw/2026-10-21/IMG_3074b.mov 15.0 16.4
+raw/2026-10-21/IMG_3074b.mov 37.1 40.4
+raw/2026-10-21/IMG_3074b.mov 55.9 59.8
+# Matchup 5: a sound at church on a Sunday (IMG_3074a)
+raw/2026-10-21/IMG_3074a.mov 5.6 9.3
+raw/2026-10-21/IMG_3074a.mov 26.7 29.2
+raw/2026-10-21/IMG_3074a.mov 57.1 58.3
+raw/2026-10-21/IMG_3074a.mov 41.0 44.3

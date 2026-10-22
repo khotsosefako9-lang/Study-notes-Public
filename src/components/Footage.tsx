@@ -29,8 +29,8 @@ export const Footage: React.FC<{ video?: string; position?: string }> = ({ video
 };
 
 // Darkens the lower half so the board reads cleanly over any footage.
-export const BoardShade: React.FC = () => (
+export const BoardShade: React.FC<{ top?: number }> = ({ top = 960 }) => (
   <AbsoluteFill
-    style={{ background: "linear-gradient(180deg, rgba(22,16,10,0) 38%, rgba(22,16,10,.55) 50%, rgba(22,16,10,.8) 100%)" }}
+    style={{ background: `linear-gradient(180deg, rgba(22,16,10,0) ${top - 230}px, rgba(22,16,10,.55) ${top}px, rgba(22,16,10,.8) 100%)` }}
   />
 );
