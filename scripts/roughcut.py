@@ -7,6 +7,7 @@ Times are seconds or mm:ss(.ms). Lines starting with # are ignored.
   python3 scripts/roughcut.py cuts.txt public/footage/tenable.mp4 --crop-x 0.5
 """
 import argparse
+import json
 import shlex
 import subprocess
 import sys
@@ -21,12 +22,15 @@ def seconds(s):
 
 
 def probe_size(path):
+    """Display size: phones store portrait video sideways with a rotation flag, which ffmpeg applies."""
     out = subprocess.check_output([
         "ffprobe", "-v", "error", "-select_streams", "v:0",
-        "-show_entries", "stream=width,height", "-of", "csv=p=0", path,
+        "-show_entries", "stream=width,height:stream_side_data=rotation", "-of", "json", path,
     ], text=True)
-    w, h = out.strip().split(",")[:2]
-    return int(w), int(h)
+    s = json.loads(out)["streams"][0]
+    w, h = s["width"], s["height"]
+    rotation = next((d["rotation"] for d in s.get("side_data_list", []) if "rotation" in d), 0)
+    return (h, w) if abs(int(rotation)) % 180 == 90 else (w, h)
 
 
 def main():

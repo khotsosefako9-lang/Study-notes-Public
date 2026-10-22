@@ -1,12 +1,101 @@
 {
   "title": "Fast Money",
-  "subtitle": "(Player 2 can't hear)",
-  "durationInSeconds": 56,
+  "subtitle": "(Headphones on)",
+  "durationInSeconds": 49,
   "names": [
-    "Thando",
-    "Lwazi"
+    "Ladies",
+    "Guys"
   ],
-  "goal": 200,
+  "rows": [
+    {
+      "q": "Name a book of the Old Testament.",
+      "qAt": 1,
+      "p1": {
+        "a": "Jesus",
+        "pts": 0,
+        "at": 4,
+        "ptsAt": 7
+      },
+      "p2": {
+        "a": "Philippians",
+        "pts": 0,
+        "at": 5,
+        "ptsAt": 8
+      }
+    },
+    {
+      "q": "Name something Jesus called himself.",
+      "qAt": 10,
+      "p1": {
+        "a": "Son of man",
+        "pts": 8,
+        "at": 13,
+        "ptsAt": 16
+      },
+      "p2": {
+        "a": "Joshua",
+        "pts": 0,
+        "at": 14,
+        "ptsAt": 17
+      }
+    },
+    {
+      "q": "Name something you'd find in a church.",
+      "qAt": 19,
+      "p1": {
+        "a": "Bible",
+        "pts": 30,
+        "at": 22,
+        "ptsAt": 25
+      },
+      "p2": {
+        "a": "Jordan",
+        "pts": 0,
+        "at": 23,
+        "ptsAt": 26
+      }
+    },
+    {
+      "q": "Name a king in the Bible.",
+      "qAt": 28,
+      "p1": {
+        "a": "God",
+        "pts": 0,
+        "at": 31,
+        "ptsAt": 34
+      },
+      "p2": {
+        "a": "Exodus",
+        "pts": 0,
+        "at": 32,
+        "ptsAt": 35
+      }
+    },
+    {
+      "q": "Name a sound you hear at church on a Sunday.",
+      "qAt": 37,
+      "p1": {
+        "a": "Solomon",
+        "pts": 0,
+        "at": 40,
+        "ptsAt": 43
+      },
+      "p2": {
+        "a": "Jesus",
+        "pts": 0,
+        "at": 41,
+        "ptsAt": 44
+      }
+    }
+  ],
+  "stamps": [
+    {
+      "at": 46,
+      "text": "Ladies win!",
+      "tone": "gold",
+      "duration": 3
+    }
+  ],
   "captions": [
     {
       "text": "Captions",
@@ -32,102 +121,6 @@
       "text": "here",
       "start": 2.28,
       "end": 2.56
-    }
-  ],
-  "timers": [
-    {
-      "start": 2,
-      "seconds": 20,
-      "until": 17
-    },
-    {
-      "start": 30,
-      "seconds": 25,
-      "until": 45
-    }
-  ],
-  "coverP1": [
-    29.5,
-    46
-  ],
-  "rows": [
-    {
-      "p1": {
-        "a": "Genesis",
-        "pts": 38,
-        "at": 4,
-        "ptsAt": 19
-      },
-      "p2": {
-        "a": "Exodus",
-        "pts": 14,
-        "at": 32,
-        "ptsAt": 47
-      }
-    },
-    {
-      "p1": {
-        "a": "Light of the world",
-        "pts": 22,
-        "at": 7,
-        "ptsAt": 20.5
-      },
-      "p2": {
-        "a": "Good shepherd",
-        "pts": 20,
-        "at": 35,
-        "ptsAt": 48.5
-      }
-    },
-    {
-      "p1": {
-        "a": "Bible",
-        "pts": 30,
-        "at": 10,
-        "ptsAt": 22
-      },
-      "p2": {
-        "a": "Cross",
-        "pts": 18,
-        "at": 38,
-        "ptsAt": 50
-      }
-    },
-    {
-      "p1": {
-        "a": "Solomon",
-        "pts": 24,
-        "at": 13,
-        "ptsAt": 23.5
-      },
-      "p2": {
-        "a": "David",
-        "pts": 38,
-        "at": 41,
-        "ptsAt": 51.5
-      }
-    },
-    {
-      "p1": {
-        "a": "Clapping",
-        "pts": 20,
-        "at": 16,
-        "ptsAt": 25
-      },
-      "p2": {
-        "a": "Singing",
-        "pts": 34,
-        "at": 44,
-        "ptsAt": 53
-      }
-    }
-  ],
-  "stamps": [
-    {
-      "at": 52,
-      "text": "200 reached!",
-      "tone": "green",
-      "duration": 3
     }
   ]
 }
