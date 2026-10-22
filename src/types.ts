@@ -12,6 +12,7 @@ export type Stamp = {
 export type Common = {
   video?: string; // path inside public/, e.g. "footage/tenable-roughcut.mp4"
   videoPosition?: string; // CSS object-position, e.g. "50% 30%"
+  videoOffsetY?: number; // push the shot down to make room for the board above the players
   durationInSeconds: number;
   title: string;
   captions?: Word[];

@@ -684,7 +684,9 @@
       "duration": 2.2
     }
   ],
-  "boardTop": 1110,
-  "captionY": 600,
-  "subtitleUntil": 13.6
+  "boardTop": 450,
+  "captionY": 1500,
+  "subtitleUntil": 13.6,
+  "videoOffsetY": 180,
+  "boardScale": 0.92
 }

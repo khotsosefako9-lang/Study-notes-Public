@@ -73,7 +73,7 @@ export const Tenable: React.FC<TenableProps> = (p) => {
 
   return (
     <AbsoluteFill style={{ background: C.night }}>
-      <Footage video={p.video} position={p.videoPosition} />
+      <Footage video={p.video} position={p.videoPosition} offsetY={p.videoOffsetY} />
       <BoardShade />
       <TitleBar title={p.title} />
       <Captions words={p.captions} y={top - 70} />

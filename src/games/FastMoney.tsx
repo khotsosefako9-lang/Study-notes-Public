@@ -4,7 +4,7 @@ import { Captions } from "../components/Captions";
 import { TitleBar } from "../components/TitleBar";
 import { Stamps } from "../components/Stamps";
 import { Panel, Timer } from "../components/Panel";
-import { BOARD, C, FONT } from "../theme";
+import { BOARD, C, FONT, H } from "../theme";
 import { useSeconds, since } from "../time";
 import type { Common } from "../types";
 
@@ -16,7 +16,8 @@ export type FastMoneyProps = Common & {
   subtitleUntil?: number; // hide the subtitle once viewers know the rules
   goal?: number; // set for the shared-goal version; leave out for team vs team
   rows: { q?: string; qAt?: number; p1?: Answer; p2?: Answer }[]; // five questions or matchups
-  boardTop?: number; // push the board down when players sit low in the frame
+  boardTop?: number; // e.g. move the board up onto the wall above the players
+  boardScale?: number; // shrink the board, e.g. 0.85
   coverP1?: [number, number]; // optional: hide Player 1's answers while Player 2 plays, like the show
   timers?: { start: number; seconds: number; until?: number }[]; // until: hide early if they finish before time runs out
 };
@@ -62,6 +63,9 @@ const Cell: React.FC<{ t: number; a?: Answer; covered: boolean }> = ({ t, a, cov
 export const FastMoney: React.FC<FastMoneyProps> = (p) => {
   const t = useSeconds();
   const top = p.boardTop ?? BOARD.top;
+  const scale = p.boardScale ?? 1;
+  const boardBottom = top + 522 * scale; // natural board height is about 522px
+  const below = top > H / 2; // board in the lower half: shade the footage behind it
   const covered = !!p.coverP1 && t >= p.coverP1[0] && t < p.coverP1[1];
   const s1 = Math.round(p.rows.reduce((s, r) => s + counted(t, r.p1), 0));
   const s2 = Math.round(p.rows.reduce((s, r) => s + counted(t, r.p2), 0));
@@ -74,8 +78,8 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
 
   return (
     <AbsoluteFill style={{ background: C.night }}>
-      <Footage video={p.video} position={p.videoPosition} />
-      <BoardShade top={top} />
+      <Footage video={p.video} position={p.videoPosition} offsetY={p.videoOffsetY} />
+      {below && <BoardShade top={top} />}
       <TitleBar title={p.title} />
       {q?.q && (
         <div style={{ position: "absolute", top: 262, left: 70, right: 70, display: "flex", justifyContent: "center", opacity: qk, transform: `translateY(${(1 - qk) * -16}px)` }}>
@@ -96,7 +100,7 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
         </div>
       )}
 
-      <Panel style={{ top, left: BOARD.left, width: BOARD.width }}>
+      <Panel style={{ top, left: BOARD.left, width: BOARD.width, transform: `scale(${scale})`, transformOrigin: "top center" }}>
         <div style={{ display: "flex", gap: 16, marginBottom: 12 }}>
           {[p.names[0], p.names[1]].map((n, i) => (
             <div key={i} style={{ flex: 1, display: "flex", justifyContent: "space-between", alignItems: "center", padding: "0 8px" }}>
@@ -144,11 +148,11 @@ export const FastMoney: React.FC<FastMoneyProps> = (p) => {
       </Panel>
 
       {p.subtitle && t < (p.subtitleUntil ?? Infinity) && (
-        <div style={{ position: "absolute", top: top - 46, width: "100%", textAlign: "center", fontFamily: FONT.body, fontWeight: 800, fontSize: 30, color: C.cream, textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>
+        <div style={{ position: "absolute", top: below ? top - 46 : boardBottom + 14, width: "100%", textAlign: "center", fontFamily: FONT.body, fontWeight: 800, fontSize: 30, color: C.cream, textShadow: "0 2px 8px rgba(0,0,0,.6)" }}>
           {p.subtitle}
         </div>
       )}
-      <Stamps stamps={p.stamps} y={top + 240} />
+      <Stamps stamps={p.stamps} y={top + 240 * scale} />
     </AbsoluteFill>
   );
 };

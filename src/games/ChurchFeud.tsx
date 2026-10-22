@@ -125,7 +125,7 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
 
   return (
     <AbsoluteFill style={{ background: C.night }}>
-      <Footage video={p.video} position={p.videoPosition} />
+      <Footage video={p.video} position={p.videoPosition} offsetY={p.videoOffsetY} />
       {!insert && <BoardShade />}
       {insert && shotK > 0 && (
         <AbsoluteFill style={{ background: `rgba(22,16,10,${0.75 * shotK})` }}>
