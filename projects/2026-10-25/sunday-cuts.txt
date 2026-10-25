@@ -1,21 +1,28 @@
 # Sunday at REACH, 25 Oct 2026. <file> <start> <end> [zoom cx cy] (source seconds)
-# 0 Hook: "How great Thou art" (wide worship)
-raw/2026-10-25/IMG_3266.MOV 30.3 34.8
-# 1-5 Welcome b-roll (muted; Pastor Dion's announcement and the hymn play underneath)
-raw/2026-10-25/IMG_3262.MOV 0.5 2.5
-raw/2026-10-25/IMG_3260.MOV 1.0 4.5
-raw/2026-10-25/IMG_3261.MOV 0.0 3.5
-raw/2026-10-25/IMG_3263.MOV 6.5 9.0
-raw/2026-10-25/IMG_3279.MOV 10.0 13.0
-# 6-7 Worship (live sound)
-raw/2026-10-25/IMG_3246.MOV 1.4 6.9
-raw/2026-10-25/IMG_3275.MOV 0.0 5.8
-# 8 Pastor Dion, kids' talk
+# 0-4 Hook and arrival (muted; How Great Thou Art plays continuously from IMG_3266 30.3s)
+raw/2026-10-25/IMG_3266.MOV 30.3 35.0
+raw/2026-10-25/IMG_3262.MOV 0.3 3.0
+raw/2026-10-25/IMG_3244.MOV 0.0 3.5
+raw/2026-10-25/IMG_3263.MOV 0.0 3.0
+raw/2026-10-25/IMG_3263.MOV 13.5 17.5
+# 5-8 Welcome (room sound low; Pastor Dion's announcement as voiceover, no music)
+raw/2026-10-25/IMG_3260.MOV 1.0 5.0
+raw/2026-10-25/IMG_3261.MOV 0.0 4.0
+raw/2026-10-25/IMG_3279.MOV 10.0 14.0
+raw/2026-10-25/IMG_3278.MOV 2.0 5.0
+# 9-10 Worship (live sound)
+raw/2026-10-25/IMG_3247.MOV 5.9 16.3
+raw/2026-10-25/IMG_3275.MOV 0.0 5.9
+# 11 SK, Bible reading
+raw/2026-10-25/IMG_3267a.MOV 0.0 4.9 1.6 0.45 0.55
+# 12 Pastor Dion, kids' talk
 raw/2026-10-25/IMG_3258.MOV 19.0 26.6 1.8 0.5 0.55
-# 9-12 Pastor Kyle, "Destruction from Within"
+# 13-18 Pastor Kyle, "Destruction from Within"
 raw/2026-10-25/IMG_3271.MOV 5.0 9.2 1.4 0.47 0.62
-raw/2026-10-25/IMG_3274.MOV 61.1 66.3 1.4 0.47 0.62
+raw/2026-10-25/IMG_3274.MOV 22.5 27.4 1.4 0.47 0.62
+raw/2026-10-25/IMG_3274.MOV 41.6 50.4 1.4 0.47 0.62
+raw/2026-10-25/IMG_3274.MOV 54.0 66.3 1.4 0.47 0.62
 raw/2026-10-25/IMG_3274.MOV 109.2 112.8 1.4 0.47 0.62
 raw/2026-10-25/IMG_3274.MOV 114.95 118.5 1.4 0.47 0.62
-# 13 End card over fellowship (muted; hymn returns)
-raw/2026-10-25/IMG_3278.MOV 2.0 6.0
+# 19 End card over fellowship (muted; hymn returns)
+raw/2026-10-25/IMG_3278.MOV 6.0 10.5

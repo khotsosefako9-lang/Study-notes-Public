@@ -19,19 +19,22 @@ type Text = {
 
 export type HighlightsProps = Common & {
   levels?: Level[]; // the clip's own sound; 1 outside these ranges
-  music?: { src: string; at: number; startFrom?: number; until: number; volume: number; fade?: number }[];
+  // One source at a time keeps the mix clean: avoid overlapping songs, or singing under speech.
+  music?: { src: string; at: number; startFrom?: number; until: number; volume: number; fadeIn?: number; fadeOut?: number }[];
   texts?: Text[];
   endCard?: { at: number; lines: string[] };
 };
 
-const fadeIn = (t: number, from: number, to: number, f: number) =>
-  Math.min(clamp01((t - from) / f), clamp01((to - t) / f));
+const RAMP = 0.25; // seconds, so level changes aren't audible jumps
 
-const levelAt = (levels: Level[] | undefined, t: number) => {
+const envelope = (t: number, from: number, to: number, fadeIn: number, fadeOut: number) =>
+  Math.min(fadeIn > 0 ? clamp01((t - from) / fadeIn) : 1, fadeOut > 0 ? clamp01((to - t) / fadeOut) : 1);
+
+const levelAt = (levels: Level[] | undefined, t: number, end: number) => {
   const l = levels?.find((x) => t >= x.from && t < x.to);
   if (!l) return 1;
-  // Ease 0.3s into and out of each range so changes aren't audible jumps.
-  const k = fadeIn(t, l.from, l.to, 0.3);
+  // No ramp where a range starts the reel or runs to its end.
+  const k = envelope(t, l.from, l.to, l.from <= 0 ? 0 : RAMP, l.to >= end ? 0 : RAMP);
   return 1 + (l.volume - 1) * k;
 };
 
@@ -88,14 +91,15 @@ const EndCard: React.FC<{ t: number; at: number; lines: string[] }> = ({ t, at, 
 
 export const Highlights: React.FC<HighlightsProps> = (p) => {
   const t = useSeconds();
-  const { fps } = useVideoConfig();
+  const { fps, durationInFrames } = useVideoConfig();
+  const end = durationInFrames / fps;
   const ending = p.endCard && t >= p.endCard.at;
   return (
     <AbsoluteFill style={{ background: C.night }}>
       {p.video && (
         <OffthreadVideo
           src={staticFile(p.video)}
-          volume={(f) => levelAt(p.levels, f / fps)}
+          volume={(f) => levelAt(p.levels, f / fps, end)}
           style={{ width: "100%", height: "100%", objectFit: "cover", objectPosition: p.videoPosition ?? "50% 50%" }}
         />
       )}
@@ -104,7 +108,7 @@ export const Highlights: React.FC<HighlightsProps> = (p) => {
           <Audio
             src={staticFile(m.src)}
             startFrom={Math.round((m.startFrom ?? 0) * fps)}
-            volume={(f) => m.volume * fadeIn(f / fps, 0, m.until - m.at, m.fade ?? 0.6)}
+            volume={(f) => m.volume * envelope(f / fps, 0, m.until - m.at, m.fadeIn ?? 0.6, m.fadeOut ?? 0.6)}
           />
         </Sequence>
       ))}
