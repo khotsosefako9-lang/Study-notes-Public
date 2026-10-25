@@ -42,6 +42,7 @@ def main():
     ap.add_argument("out")
     ap.add_argument("--crop-x", type=float, default=0.5, help="horizontal crop position for landscape footage, 0 = left, 1 = right")
     ap.add_argument("--no-grade", action="store_true", help="skip the gentle warm grade")
+    ap.add_argument("--keep-levels", action="store_true", help="don't level each segment to the same loudness")
     args = ap.parse_args()
 
     segs = []
@@ -56,6 +57,8 @@ def main():
 
     grade = "" if args.no_grade else ",eq=contrast=1.04:saturation=1.08,colorbalance=rm=0.03:bm=-0.03"
     ff = ["ffmpeg", "-hide_banner", "-loglevel", "error", "-y"]
+    # Speech and worship are recorded at very different levels; even them out per segment.
+    level = "" if args.keep_levels else ",loudnorm=I=-16:TP=-2:LRA=11,aresample=48000"
 
     # Render each segment to 1080p on its own, so only one 4K source is decoded at a time.
     with tempfile.TemporaryDirectory() as tmp:
@@ -79,7 +82,7 @@ def main():
             piece = os.path.join(tmp, f"{n:03d}.mkv")
             subprocess.run([*ff, "-ss", f"{a}", "-t", f"{d}", "-i", src,
                             "-vf", f"{crop}scale=1080:1920,fps=30,setsar=1{grade}",
-                            "-af", f"aresample=48000,afade=t=in:d={fade},afade=t=out:st={d - fade:.3f}:d={fade}",
+                            "-af", f"aresample=48000{level},afade=t=in:d={fade},afade=t=out:st={d - fade:.3f}:d={fade}",
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "12", "-pix_fmt", "yuv420p",
                             "-c:a", "pcm_s16le", piece], check=True)
             pieces.append(piece)
