@@ -1,0 +1,735 @@
+{
+  "title": "Sunday at REACH",
+  "video": "footage/sunday/roughcut.mp4",
+  "durationInSeconds": 58.5,
+  "captionY": 1500,
+  "levels": [
+    {
+      "from": 4.5,
+      "to": 19.0,
+      "volume": 0
+    },
+    {
+      "from": 54.5,
+      "to": 58.5,
+      "volume": 0
+    }
+  ],
+  "music": [
+    {
+      "src": "footage/sunday/IMG_3266.wav",
+      "at": 4.5,
+      "startFrom": 34.8,
+      "until": 5.9,
+      "volume": 0.9,
+      "fade": 0.3
+    },
+    {
+      "src": "footage/sunday/IMG_3266.wav",
+      "at": 5.5,
+      "startFrom": 35.8,
+      "until": 19.3,
+      "volume": 0.22,
+      "fade": 0.4
+    },
+    {
+      "src": "footage/sunday/IMG_3277.wav",
+      "at": 5.6,
+      "startFrom": 19.0,
+      "until": 12.700000000000003,
+      "volume": 1,
+      "fade": 0.08
+    },
+    {
+      "src": "footage/sunday/IMG_3277.wav",
+      "at": 16.3,
+      "startFrom": 29.2,
+      "until": 18.849999999999998,
+      "volume": 1,
+      "fade": 0.08
+    },
+    {
+      "src": "footage/sunday/IMG_3266.wav",
+      "at": 54.3,
+      "startFrom": 52.3,
+      "until": 58.5,
+      "volume": 0.9,
+      "fade": 0.6
+    }
+  ],
+  "texts": [
+    {
+      "at": 0.25,
+      "until": 4.35,
+      "text": "This is Sunday at REACH",
+      "sub": "Summerstrand",
+      "style": "hook"
+    },
+    {
+      "at": 4.7,
+      "until": 8.2,
+      "text": "Welcome",
+      "style": "label"
+    },
+    {
+      "at": 19.2,
+      "until": 22.6,
+      "text": "Worship",
+      "style": "label"
+    },
+    {
+      "at": 30.4,
+      "until": 33.6,
+      "text": "The Word",
+      "style": "label"
+    },
+    {
+      "at": 30.5,
+      "until": 35.0,
+      "text": "Pastor Dion",
+      "sub": "Kids' talk",
+      "style": "name"
+    },
+    {
+      "at": 38.0,
+      "until": 42.0,
+      "text": "Pastor Kyle",
+      "sub": "Destruction from Within · Judges 8–9",
+      "style": "name"
+    }
+  ],
+  "endCard": {
+    "at": 54.5,
+    "lines": [
+      "See you Sunday",
+      "Everyone is welcome"
+    ]
+  },
+  "captions": [
+    {
+      "text": "How",
+      "start": 0.0,
+      "end": 1.6
+    },
+    {
+      "text": "great",
+      "start": 1.6,
+      "end": 2.5
+    },
+    {
+      "text": "Thou",
+      "start": 2.5,
+      "end": 3.44
+    },
+    {
+      "text": "art.",
+      "start": 3.44,
+      "end": 4.46
+    },
+    {
+      "text": "Don't",
+      "start": 5.7,
+      "end": 5.8
+    },
+    {
+      "text": "forget",
+      "start": 5.8,
+      "end": 6.1
+    },
+    {
+      "text": "the",
+      "start": 6.1,
+      "end": 6.3
+    },
+    {
+      "text": "tea",
+      "start": 6.3,
+      "end": 6.5
+    },
+    {
+      "text": "and",
+      "start": 6.5,
+      "end": 6.6
+    },
+    {
+      "text": "coffee",
+      "start": 6.6,
+      "end": 6.8
+    },
+    {
+      "text": "in",
+      "start": 6.8,
+      "end": 7.1
+    },
+    {
+      "text": "the",
+      "start": 7.1,
+      "end": 7.2
+    },
+    {
+      "text": "foyer,",
+      "start": 7.2,
+      "end": 7.6
+    },
+    {
+      "text": "the",
+      "start": 7.8,
+      "end": 7.9
+    },
+    {
+      "text": "info",
+      "start": 7.9,
+      "end": 8.15
+    },
+    {
+      "text": "desk",
+      "start": 8.15,
+      "end": 8.4
+    },
+    {
+      "text": "is",
+      "start": 8.4,
+      "end": 8.6
+    },
+    {
+      "text": "there",
+      "start": 8.6,
+      "end": 8.9
+    },
+    {
+      "text": "with",
+      "start": 8.9,
+      "end": 9.1
+    },
+    {
+      "text": "all",
+      "start": 9.1,
+      "end": 9.2
+    },
+    {
+      "text": "the",
+      "start": 9.2,
+      "end": 9.3
+    },
+    {
+      "text": "information",
+      "start": 9.3,
+      "end": 9.9
+    },
+    {
+      "text": "about",
+      "start": 9.9,
+      "end": 10.2
+    },
+    {
+      "text": "Bible",
+      "start": 10.2,
+      "end": 10.5
+    },
+    {
+      "text": "studies,",
+      "start": 10.5,
+      "end": 10.9
+    },
+    {
+      "text": "where",
+      "start": 11.1,
+      "end": 11.3
+    },
+    {
+      "text": "you",
+      "start": 11.3,
+      "end": 11.4
+    },
+    {
+      "text": "can",
+      "start": 11.4,
+      "end": 11.6
+    },
+    {
+      "text": "serve",
+      "start": 11.6,
+      "end": 11.9
+    },
+    {
+      "text": "in",
+      "start": 11.9,
+      "end": 12.2
+    },
+    {
+      "text": "the",
+      "start": 12.2,
+      "end": 12.3
+    },
+    {
+      "text": "church.",
+      "start": 12.3,
+      "end": 12.6
+    },
+    {
+      "text": "We'd",
+      "start": 16.4,
+      "end": 16.8
+    },
+    {
+      "text": "love",
+      "start": 16.8,
+      "end": 17.0
+    },
+    {
+      "text": "to",
+      "start": 17.0,
+      "end": 17.1
+    },
+    {
+      "text": "chat",
+      "start": 17.1,
+      "end": 17.4
+    },
+    {
+      "text": "with",
+      "start": 17.4,
+      "end": 17.6
+    },
+    {
+      "text": "you,",
+      "start": 17.6,
+      "end": 17.8
+    },
+    {
+      "text": "so",
+      "start": 17.9,
+      "end": 18.0
+    },
+    {
+      "text": "don't",
+      "start": 18.0,
+      "end": 18.2
+    },
+    {
+      "text": "rush",
+      "start": 18.2,
+      "end": 18.4
+    },
+    {
+      "text": "off.",
+      "start": 18.4,
+      "end": 18.7
+    },
+    {
+      "text": "Sing",
+      "start": 19.18,
+      "end": 20.04
+    },
+    {
+      "text": "with",
+      "start": 20.04,
+      "end": 20.84
+    },
+    {
+      "text": "joy,",
+      "start": 20.84,
+      "end": 21.54
+    },
+    {
+      "text": "our",
+      "start": 22.12,
+      "end": 22.52
+    },
+    {
+      "text": "God",
+      "start": 22.52,
+      "end": 23.12
+    },
+    {
+      "text": "is",
+      "start": 23.12,
+      "end": 23.48
+    },
+    {
+      "text": "for",
+      "start": 23.48,
+      "end": 23.92
+    },
+    {
+      "text": "us.",
+      "start": 23.92,
+      "end": 24.4
+    },
+    {
+      "text": "Who",
+      "start": 25.78,
+      "end": 26.82
+    },
+    {
+      "text": "is",
+      "start": 26.82,
+      "end": 27.46
+    },
+    {
+      "text": "like",
+      "start": 27.46,
+      "end": 27.96
+    },
+    {
+      "text": "the",
+      "start": 27.96,
+      "end": 28.46
+    },
+    {
+      "text": "Lord",
+      "start": 28.46,
+      "end": 29.22
+    },
+    {
+      "text": "our",
+      "start": 29.22,
+      "end": 29.98
+    },
+    {
+      "text": "God?",
+      "start": 29.98,
+      "end": 30.28
+    },
+    {
+      "text": "So",
+      "start": 30.28,
+      "end": 30.56
+    },
+    {
+      "text": "we",
+      "start": 30.56,
+      "end": 30.8
+    },
+    {
+      "text": "need",
+      "start": 30.8,
+      "end": 31.0
+    },
+    {
+      "text": "to",
+      "start": 31.0,
+      "end": 31.12
+    },
+    {
+      "text": "remember",
+      "start": 31.12,
+      "end": 31.46
+    },
+    {
+      "text": "that",
+      "start": 31.46,
+      "end": 31.68
+    },
+    {
+      "text": "it",
+      "start": 31.68,
+      "end": 31.76
+    },
+    {
+      "text": "doesn't",
+      "start": 31.76,
+      "end": 32.02
+    },
+    {
+      "text": "help",
+      "start": 32.02,
+      "end": 32.26
+    },
+    {
+      "text": "just",
+      "start": 32.26,
+      "end": 32.5
+    },
+    {
+      "text": "to",
+      "start": 32.5,
+      "end": 32.82
+    },
+    {
+      "text": "know",
+      "start": 32.82,
+      "end": 33.16
+    },
+    {
+      "text": "about",
+      "start": 33.16,
+      "end": 33.52
+    },
+    {
+      "text": "Jesus",
+      "start": 33.52,
+      "end": 34.0
+    },
+    {
+      "text": "in",
+      "start": 34.0,
+      "end": 34.24
+    },
+    {
+      "text": "our",
+      "start": 34.24,
+      "end": 34.52
+    },
+    {
+      "text": "heads.",
+      "start": 34.52,
+      "end": 34.94
+    },
+    {
+      "text": "We",
+      "start": 34.94,
+      "end": 36.0
+    },
+    {
+      "text": "need",
+      "start": 36.0,
+      "end": 36.24
+    },
+    {
+      "text": "to",
+      "start": 36.24,
+      "end": 36.34
+    },
+    {
+      "text": "make",
+      "start": 36.34,
+      "end": 36.54
+    },
+    {
+      "text": "Jesus",
+      "start": 36.54,
+      "end": 36.9
+    },
+    {
+      "text": "part",
+      "start": 36.9,
+      "end": 37.2
+    },
+    {
+      "text": "of",
+      "start": 37.2,
+      "end": 37.36
+    },
+    {
+      "text": "our",
+      "start": 37.36,
+      "end": 37.62
+    },
+    {
+      "text": "lives.",
+      "start": 37.62,
+      "end": 37.88
+    },
+    {
+      "text": "I've",
+      "start": 37.88,
+      "end": 38.28
+    },
+    {
+      "text": "titled",
+      "start": 38.28,
+      "end": 38.5
+    },
+    {
+      "text": "my",
+      "start": 38.5,
+      "end": 38.84
+    },
+    {
+      "text": "sermon",
+      "start": 38.84,
+      "end": 39.1
+    },
+    {
+      "text": "this",
+      "start": 39.1,
+      "end": 39.36
+    },
+    {
+      "text": "morning,",
+      "start": 39.36,
+      "end": 39.66
+    },
+    {
+      "text": "Destruction",
+      "start": 39.66,
+      "end": 40.62
+    },
+    {
+      "text": "from",
+      "start": 40.62,
+      "end": 41.6
+    },
+    {
+      "text": "Within.",
+      "start": 41.6,
+      "end": 42.06
+    },
+    {
+      "text": "It's",
+      "start": 42.06,
+      "end": 42.46
+    },
+    {
+      "text": "the",
+      "start": 42.46,
+      "end": 42.68
+    },
+    {
+      "text": "sign",
+      "start": 42.68,
+      "end": 42.88
+    },
+    {
+      "text": "that",
+      "start": 42.88,
+      "end": 43.1
+    },
+    {
+      "text": "God",
+      "start": 43.1,
+      "end": 43.46
+    },
+    {
+      "text": "is",
+      "start": 43.46,
+      "end": 43.86
+    },
+    {
+      "text": "in",
+      "start": 43.86,
+      "end": 44.02
+    },
+    {
+      "text": "control.",
+      "start": 44.02,
+      "end": 44.54
+    },
+    {
+      "text": "It's",
+      "start": 44.54,
+      "end": 45.0
+    },
+    {
+      "text": "the",
+      "start": 45.0,
+      "end": 45.16
+    },
+    {
+      "text": "sign",
+      "start": 45.16,
+      "end": 45.36
+    },
+    {
+      "text": "that",
+      "start": 45.36,
+      "end": 45.6
+    },
+    {
+      "text": "Jesus",
+      "start": 45.6,
+      "end": 46.26
+    },
+    {
+      "text": "is",
+      "start": 46.26,
+      "end": 46.88
+    },
+    {
+      "text": "the",
+      "start": 46.88,
+      "end": 47.1
+    },
+    {
+      "text": "King.",
+      "start": 47.1,
+      "end": 47.28
+    },
+    {
+      "text": "Maybe",
+      "start": 47.28,
+      "end": 47.82
+    },
+    {
+      "text": "someone",
+      "start": 47.82,
+      "end": 48.26
+    },
+    {
+      "text": "can",
+      "start": 48.26,
+      "end": 48.58
+    },
+    {
+      "text": "sense",
+      "start": 48.58,
+      "end": 48.74
+    },
+    {
+      "text": "that",
+      "start": 48.74,
+      "end": 48.94
+    },
+    {
+      "text": "God",
+      "start": 48.94,
+      "end": 49.14
+    },
+    {
+      "text": "is",
+      "start": 49.14,
+      "end": 49.32
+    },
+    {
+      "text": "calling",
+      "start": 49.32,
+      "end": 49.64
+    },
+    {
+      "text": "them",
+      "start": 49.64,
+      "end": 49.88
+    },
+    {
+      "text": "to",
+      "start": 49.88,
+      "end": 50.06
+    },
+    {
+      "text": "come",
+      "start": 50.06,
+      "end": 50.32
+    },
+    {
+      "text": "to",
+      "start": 50.32,
+      "end": 50.52
+    },
+    {
+      "text": "Jesus.",
+      "start": 50.52,
+      "end": 50.88
+    },
+    {
+      "text": "Don't",
+      "start": 51.05,
+      "end": 51.35
+    },
+    {
+      "text": "delay",
+      "start": 51.35,
+      "end": 52.65
+    },
+    {
+      "text": "that",
+      "start": 52.65,
+      "end": 53.85
+    },
+    {
+      "text": "decision.",
+      "start": 53.85,
+      "end": 54.25
+    }
+  ]
+}

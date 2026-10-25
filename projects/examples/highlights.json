@@ -1,0 +1,10 @@
+{
+  "title": "Sunday at REACH",
+  "durationInSeconds": 8,
+  "texts": [
+    { "at": 0.2, "until": 3, "text": "This is Sunday at REACH", "sub": "Summerstrand", "style": "hook" },
+    { "at": 3.2, "until": 5.5, "text": "Worship", "style": "label" },
+    { "at": 3.4, "until": 5.5, "text": "Pastor Dion", "style": "name" }
+  ],
+  "endCard": { "at": 5.6, "lines": ["See you Sunday", "REACH Summerstrand"] }
+}

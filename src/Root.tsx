@@ -2,11 +2,13 @@ import { Composition, CalculateMetadataFunction } from "remotion";
 import { FastMoney, FastMoneyProps } from "./games/FastMoney";
 import { ChurchFeud, ChurchFeudProps } from "./games/ChurchFeud";
 import { Tenable, TenableProps } from "./games/Tenable";
+import { Highlights, HighlightsProps } from "./Highlights";
 import { FPS, W, H } from "./theme";
 import type { Common } from "./types";
 import fastMoney from "../projects/examples/fast-money.json";
 import churchFeud from "../projects/examples/church-feud.json";
 import tenable from "../projects/examples/tenable.json";
+import highlights from "../projects/examples/highlights.json";
 
 // Length comes from the props file, so each reel sets its own duration.
 const byProps: CalculateMetadataFunction<Common> = ({ props }) => ({
@@ -21,5 +23,7 @@ export const Root: React.FC = () => (
       defaultProps={churchFeud as ChurchFeudProps} calculateMetadata={byProps as any} />
     <Composition id="Tenable" component={Tenable} width={W} height={H} fps={FPS} durationInFrames={1}
       defaultProps={tenable as TenableProps} calculateMetadata={byProps as any} />
+    <Composition id="Highlights" component={Highlights} width={W} height={H} fps={FPS} durationInFrames={1}
+      defaultProps={highlights as HighlightsProps} calculateMetadata={byProps as any} />
   </>
 );

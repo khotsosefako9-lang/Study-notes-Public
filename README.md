@@ -19,6 +19,8 @@ Each template is a Remotion composition at 1080×1920, 30 fps, in the church's c
 
 All three also take `captions` (word timings from Whisper, current word in gold) and `stamps` (pop-up words such as "Steal!", "Tenable!" or "200 reached!").
 
+`Highlights` is for everything outside the games, such as a Sunday service reel: one edited clip with a worship or music bed under it (`music`, with `levels` to mute or duck the clip's own sound), a hook title, section labels and name tags (`texts`), captions and a branded end card (`endCard`). See `projects/2026-10-25/sunday.json`.
+
 Example props for each game are in `projects/examples/`. Every time in a props file is in seconds on the edited clip.
 
 ## Making a reel
@@ -28,7 +30,10 @@ Example props for each game are in `projects/examples/`. Every time in a props f
    ```
    raw/IMG_0412.MOV 0:12.5 0:19
    raw/IMG_0412.MOV 1:03 1:20.4
+   raw/IMG_0415.MOV 0:40 0:46 1.5 0.5 0.6
    ```
+
+   The optional last three numbers punch in: zoom, then the point to centre on as fractions of the frame (here 1.5× around the preacher).
 
 2. Cut, reframe to 9:16, apply the warm grade and level the audio:
 

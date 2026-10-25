@@ -1,8 +1,9 @@
 #!/usr/bin/env python3
 """Cut the best moments from raw footage into one vertical 1080x1920 clip.
 
-The cut list has one segment per line: <source file> <start> <end>
-Times are seconds or mm:ss(.ms). Lines starting with # are ignored.
+The cut list has one segment per line: <source file> <start> <end> [zoom cx cy]
+Times are seconds or mm:ss(.ms). Lines starting with # are ignored. The optional
+zoom punches in on a point given as fractions of the frame, e.g. 1.5 0.5 0.6.
 
   python3 scripts/roughcut.py cuts.txt public/footage/tenable.mp4 --crop-x 0.5
 """
@@ -48,8 +49,8 @@ def main():
         line = line.strip()
         if not line or line.startswith("#"):
             continue
-        src, start, end = shlex.split(line)
-        segs.append((src, seconds(start), seconds(end)))
+        src, start, end, *zoom = shlex.split(line)
+        segs.append((src, seconds(start), seconds(end), [float(z) for z in zoom] or [1.0, 0.5, 0.5]))
     if not segs:
         sys.exit("No segments in the cut list")
 
@@ -59,14 +60,20 @@ def main():
     # Render each segment to 1080p on its own, so only one 4K source is decoded at a time.
     with tempfile.TemporaryDirectory() as tmp:
         pieces = []
-        for n, (src, a, b) in enumerate(segs):
+        for n, (src, a, b, (zoom, cx, cy)) in enumerate(segs):
             w, h = probe_size(src)
             if w / h > 9 / 16:  # wider than vertical: crop the sides
-                cw = int(h * 9 / 16) // 2 * 2
-                crop = f"crop={cw}:{h}:{int((w - cw) * args.crop_x)}:0,"
+                cw, ch = int(h * 9 / 16), h
+                x0, y0 = (w - cw) * args.crop_x, 0
             else:
-                ch = int(w * 16 / 9) // 2 * 2
-                crop = f"crop={w}:{ch}:0:{(h - ch) // 2}," if ch < h else ""
+                cw, ch = w, min(h, int(w * 16 / 9))
+                x0, y0 = 0, (h - ch) / 2
+            # Punch in around (cx, cy), keeping the crop inside the frame.
+            zw, zh = cw / zoom, ch / zoom
+            x = min(max(x0 + cx * cw - zw / 2, x0), x0 + cw - zw)
+            y = min(max(y0 + cy * ch - zh / 2, y0), y0 + ch - zh)
+            even = lambda v: int(v) // 2 * 2
+            crop = f"crop={even(zw)}:{even(zh)}:{even(x)}:{even(y)}," if (zw, zh) != (w, h) else ""
             d = b - a
             fade = min(0.03, d / 4)  # avoids clicks at hard cuts
             piece = os.path.join(tmp, f"{n:03d}.mkv")
@@ -83,7 +90,7 @@ def main():
         subprocess.run([*ff, *inputs, "-filter_complex", graph, "-map", "[v]", "-map", "[a]",
                         "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p",
                         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", args.out], check=True)
-    total = sum(b - a for _, a, b in segs)
+    total = sum(b - a for _, a, b, _ in segs)
     print(f"{args.out}: {len(segs)} segments, {total:.1f}s")
 
 
