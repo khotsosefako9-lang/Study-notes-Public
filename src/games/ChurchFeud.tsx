@@ -19,6 +19,8 @@ export type ChurchFeudProps = Common & {
   awards?: { at: number; team: 0 | 1 }[]; // bank goes to a team
   layout?: "split" | "insert"; // split: board always under the footage. insert: full-screen board cut-ins
   boardShots?: { from: number; to: number }[];
+  boardTop?: number; // split layout: e.g. move the board up onto the wall above the players
+  boardScale?: number;
 };
 
 const scores = (p: ChurchFeudProps, t: number) => {
@@ -122,11 +124,13 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
   const shot = p.boardShots?.find((s) => t >= s.from && t < s.to);
   const shotK = shot ? Math.min(easeOut((t - shot.from) / 0.25), clamp01((shot.to - t) / 0.2)) : 0;
   const boardH = 140 + Math.ceil(p.answers.length / 2) * 88;
+  const top = p.boardTop ?? BOARD.top;
+  const scale = p.boardScale ?? 1;
 
   return (
     <AbsoluteFill style={{ background: C.night }}>
       <Footage video={p.video} position={p.videoPosition} offsetY={p.videoOffsetY} />
-      {!insert && <BoardShade />}
+      {!insert && top > H / 2 && <BoardShade top={top} />}
       {insert && shotK > 0 && (
         <AbsoluteFill style={{ background: `rgba(22,16,10,${0.75 * shotK})` }}>
           <Board p={p} t={t} style={{ top: (H - boardH) / 2 + 80, left: BOARD.left, width: BOARD.width, opacity: shotK, transform: `scale(${0.94 + 0.06 * shotK})` }} />
@@ -144,13 +148,13 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
         <Captions words={shot ? undefined : p.captions} y={1180} />
       ) : (
         <>
-          <Captions words={p.captions} y={BOARD.top - 90} />
-          <Board p={p} t={t} style={{ top: BOARD.top, left: BOARD.left, width: BOARD.width }} />
+          <Captions words={p.captions} y={p.captionY ?? top - 90} />
+          <Board p={p} t={t} style={{ top, left: BOARD.left, width: BOARD.width, transform: `scale(${scale})`, transformOrigin: "top center" }} />
         </>
       )}
 
       <StrikeFlash p={p} t={t} />
-      <Stamps stamps={p.stamps} y={insert ? 960 : BOARD.top + 300} />
+      <Stamps stamps={p.stamps} y={insert ? 960 : top + 300 * scale} />
     </AbsoluteFill>
   );
 };
