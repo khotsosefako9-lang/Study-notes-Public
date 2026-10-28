@@ -23,6 +23,8 @@ export type ChurchFeudProps = Common & Round & {
   teams: [string, string];
   rounds?: (Round & { at: number })[]; // several rounds in one reel; team scores carry over
   intro?: string; // banner text before the first round, e.g. the hook
+  rules?: { at: number; until: number; lines: string[] }; // how-to-play card shown in the board's place
+  scoreBy?: "points" | "rounds"; // rounds: each award counts as one round won
   layout?: "split" | "insert"; // split: board always under the footage. insert: full-screen board cut-ins
   boardShots?: { from: number; to: number }[];
   boardTop?: number; // split layout: e.g. move the board up onto the wall above the players
@@ -74,9 +76,13 @@ const Slot: React.FC<{ t: number; n: number; a: Answer }> = ({ t, n, a }) => {
   );
 };
 
+const roundsWon = (p: ChurchFeudProps, t: number) =>
+  [0, 1].map((i) => (p.awards ?? []).filter((w) => w.at <= t && w.team === i).length);
+
 const Board: React.FC<{ p: ChurchFeudProps; t: number; carried: number[]; style: React.CSSProperties }> = ({ p, t, carried, style }) => {
   const { team: own, bank } = scores(p, t);
-  const team = own.map((v, i) => v + carried[i]);
+  const byRounds = p.scoreBy === "rounds";
+  const team = (byRounds ? roundsWon(p, t) : own).map((v, i) => v + carried[i]);
   const strikes = (p.strikes ?? []).filter((s) => s <= t).length;
   const rows = Math.ceil(p.answers.length / 2);
   return (
@@ -84,7 +90,7 @@ const Board: React.FC<{ p: ChurchFeudProps; t: number; carried: number[]; style:
       <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 14 }}>
         {[0, 1].map((i) => (
           <div key={i} style={{ order: i === 0 ? 0 : 2, display: "flex", flexDirection: "column", alignItems: i === 0 ? "flex-start" : "flex-end", width: 280 }}>
-            <span style={{ fontFamily: FONT.display, fontWeight: 800, fontSize: 28, color: C.gold }}>{p.teams[i]}</span>
+            <span style={{ fontFamily: FONT.display, fontWeight: 800, fontSize: 28, color: C.gold }}>{p.teams[i]}{byRounds && <span style={{ fontFamily: FONT.body, fontSize: 20, color: C.muted }}> · rounds</span>}</span>
             <span style={{ fontFamily: FONT.display, fontWeight: 900, fontSize: 44, color: C.cream, lineHeight: 1 }}>{team[i]}</span>
           </div>
         ))}
@@ -131,7 +137,10 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (all) => {
   const started = all.rounds?.filter((r) => r.at <= t) ?? [];
   const current = started[started.length - 1];
   const p: ChurchFeudProps = current ? { ...all, ...current } : all;
-  const carried = [0, 1].map((i) => started.slice(0, -1).reduce((sum, r) => sum + scores({ ...all, ...r }, t).team[i], 0));
+  const carried = [0, 1].map((i) =>
+    started.slice(0, -1).reduce((sum, r) => sum + (all.scoreBy === "rounds" ? roundsWon({ ...all, ...r }, t) : scores({ ...all, ...r }, t).team)[i], 0));
+  const rules = all.rules && t >= all.rules.at && t < all.rules.until ? all.rules : undefined;
+  const rulesK = rules ? Math.min(easeOut((t - rules.at) / 0.3), clamp01((rules.until - t) / 0.25)) : 0;
   const showBoard = !all.rounds || !!current;
   const insert = p.layout === "insert";
   const shot = p.boardShots?.find((s) => t >= s.from && t < s.to);
@@ -172,6 +181,16 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (all) => {
         </>
       )}
 
+      {rules && (
+        <Panel style={{ top, left: BOARD.left, width: BOARD.width, opacity: rulesK, transform: `scale(${scale * (0.96 + 0.04 * rulesK)})`, transformOrigin: "top center" }}>
+          <div style={{ fontFamily: FONT.display, fontWeight: 800, fontSize: 40, color: C.gold, marginBottom: 14 }}>How it works</div>
+          {rules.lines.map((l, i) => (
+            <div key={i} style={{ fontFamily: FONT.display, fontWeight: 700, fontSize: 38, color: C.cream, lineHeight: 1.3, marginBottom: 8, opacity: since(t, rules.at + 0.3 + i * 0.35, 0.3) }}>
+              {l}
+            </div>
+          ))}
+        </Panel>
+      )}
       {showBoard && <StrikeFlash p={p} t={t} y={!insert && top < H / 2 ? top + 60 * scale : undefined} />}
       <Stamps stamps={all.stamps} y={insert ? 960 : top + 300 * scale} />
     </AbsoluteFill>
