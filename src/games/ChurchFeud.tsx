@@ -10,13 +10,19 @@ import type { Common } from "../types";
 
 type Answer = { a: string; pts: number; at?: number; counts?: boolean }; // counts:false = revealed after the round
 
-export type ChurchFeudProps = Common & {
+type Round = {
   round?: string; // e.g. "Round 1"
   question: string;
-  teams: [string, string];
+  players?: [string, string]; // who's up for each team this round
   answers: Answer[];
   strikes?: number[]; // times a strike is given
   awards?: { at: number; team: 0 | 1 }[]; // bank goes to a team
+};
+
+export type ChurchFeudProps = Common & Round & {
+  teams: [string, string];
+  rounds?: (Round & { at: number })[]; // several rounds in one reel; team scores carry over
+  intro?: string; // banner text before the first round, e.g. the hook
   layout?: "split" | "insert"; // split: board always under the footage. insert: full-screen board cut-ins
   boardShots?: { from: number; to: number }[];
   boardTop?: number; // split layout: e.g. move the board up onto the wall above the players
@@ -68,8 +74,9 @@ const Slot: React.FC<{ t: number; n: number; a: Answer }> = ({ t, n, a }) => {
   );
 };
 
-const Board: React.FC<{ p: ChurchFeudProps; t: number; style: React.CSSProperties }> = ({ p, t, style }) => {
-  const { team, bank } = scores(p, t);
+const Board: React.FC<{ p: ChurchFeudProps; t: number; carried: number[]; style: React.CSSProperties }> = ({ p, t, carried, style }) => {
+  const { team: own, bank } = scores(p, t);
+  const team = own.map((v, i) => v + carried[i]);
   const strikes = (p.strikes ?? []).filter((s) => s <= t).length;
   const rows = Math.ceil(p.answers.length / 2);
   return (
@@ -102,13 +109,13 @@ const Board: React.FC<{ p: ChurchFeudProps; t: number; style: React.CSSPropertie
 };
 
 // Big red X(s) over the screen when a strike lands, like the show.
-const StrikeFlash: React.FC<{ p: ChurchFeudProps; t: number }> = ({ p, t }) => {
+const StrikeFlash: React.FC<{ p: ChurchFeudProps; t: number; y?: number }> = ({ p, t, y }) => {
   const list = p.strikes ?? [];
   const idx = list.findIndex((s) => t >= s && t < s + 1);
   if (idx < 0) return null;
   const k = easeOut((t - list[idx]) / 0.15), out = clamp01((list[idx] + 1 - t) / 0.2);
   return (
-    <AbsoluteFill style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: "center", gap: 20, opacity: Math.min(k, out), zIndex: 30 }}>
+    <AbsoluteFill style={{ display: "flex", flexDirection: "row", justifyContent: "center", alignItems: y === undefined ? "center" : "flex-start", paddingTop: y ?? 0, gap: 20, opacity: Math.min(k, out), zIndex: 30 }}>
       {Array.from({ length: idx + 1 }, (_, i) => (
         <div key={i} style={{ width: 230, height: 270, borderRadius: 26, background: "rgba(22,16,10,.85)", border: `6px solid ${C.bad}`, display: "grid", placeItems: "center", transform: `scale(${0.8 + 0.2 * k})`, fontFamily: FONT.display, fontWeight: 900, fontSize: 220, color: C.bad, lineHeight: 1 }}>
           ✕
@@ -118,8 +125,14 @@ const StrikeFlash: React.FC<{ p: ChurchFeudProps; t: number }> = ({ p, t }) => {
   );
 };
 
-export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
+export const ChurchFeud: React.FC<ChurchFeudProps> = (all) => {
   const t = useSeconds();
+  // With rounds, show the latest one that has started; earlier rounds' awards carry into the team scores.
+  const started = all.rounds?.filter((r) => r.at <= t) ?? [];
+  const current = started[started.length - 1];
+  const p: ChurchFeudProps = current ? { ...all, ...current } : all;
+  const carried = [0, 1].map((i) => started.slice(0, -1).reduce((sum, r) => sum + scores({ ...all, ...r }, t).team[i], 0));
+  const showBoard = !all.rounds || !!current;
   const insert = p.layout === "insert";
   const shot = p.boardShots?.find((s) => t >= s.from && t < s.to);
   const shotK = shot ? Math.min(easeOut((t - shot.from) / 0.25), clamp01((shot.to - t) / 0.2)) : 0;
@@ -133,14 +146,20 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
       {!insert && top > H / 2 && <BoardShade top={top} />}
       {insert && shotK > 0 && (
         <AbsoluteFill style={{ background: `rgba(22,16,10,${0.75 * shotK})` }}>
-          <Board p={p} t={t} style={{ top: (H - boardH) / 2 + 80, left: BOARD.left, width: BOARD.width, opacity: shotK, transform: `scale(${0.94 + 0.06 * shotK})` }} />
+          <Board p={p} t={t} carried={carried} style={{ top: (H - boardH) / 2 + 80, left: BOARD.left, width: BOARD.width, opacity: shotK, transform: `scale(${0.94 + 0.06 * shotK})` }} />
         </AbsoluteFill>
       )}
       <TitleBar title={p.title} />
       <div style={{ position: "absolute", top: 262, left: 70, right: 70, display: "flex", justifyContent: "center" }}>
         <div style={{ background: C.cream, borderRadius: 22, padding: "16px 30px", textAlign: "center", boxShadow: "0 10px 30px rgba(0,0,0,.35)" }}>
-          {p.round && <div style={{ fontFamily: FONT.body, fontWeight: 800, fontSize: 26, color: C.ember, letterSpacing: 3, textTransform: "uppercase" }}>{p.round}</div>}
-          <div style={{ fontFamily: FONT.display, fontWeight: 700, fontSize: 42, color: C.ink, lineHeight: 1.15 }}>{p.question}</div>
+          {showBoard ? (
+            <>
+              {p.round && <div style={{ fontFamily: FONT.body, fontWeight: 800, fontSize: 26, color: C.ember, letterSpacing: 3, textTransform: "uppercase" }}>{p.round}{p.players && ` · ${p.players[0]} vs ${p.players[1]}`}</div>}
+              <div style={{ fontFamily: FONT.display, fontWeight: 700, fontSize: 42, color: C.ink, lineHeight: 1.15 }}>{p.question}</div>
+            </>
+          ) : (
+            <div style={{ fontFamily: FONT.display, fontWeight: 700, fontSize: 42, color: C.ink, lineHeight: 1.15 }}>{all.intro}</div>
+          )}
         </div>
       </div>
 
@@ -149,12 +168,12 @@ export const ChurchFeud: React.FC<ChurchFeudProps> = (p) => {
       ) : (
         <>
           <Captions words={p.captions} y={p.captionY ?? top - 90} />
-          <Board p={p} t={t} style={{ top, left: BOARD.left, width: BOARD.width, transform: `scale(${scale})`, transformOrigin: "top center" }} />
+          {showBoard && <Board p={p} t={t} carried={carried} style={{ top, left: BOARD.left, width: BOARD.width, transform: `scale(${scale})`, transformOrigin: "top center" }} />}
         </>
       )}
 
-      <StrikeFlash p={p} t={t} />
-      <Stamps stamps={p.stamps} y={insert ? 960 : top + 300 * scale} />
+      {showBoard && <StrikeFlash p={p} t={t} y={!insert && top < H / 2 ? top + 60 * scale : undefined} />}
+      <Stamps stamps={all.stamps} y={insert ? 960 : top + 300 * scale} />
     </AbsoluteFill>
   );
 };

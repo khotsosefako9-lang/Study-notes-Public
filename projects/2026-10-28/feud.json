@@ -1,0 +1,1114 @@
+{
+  "title": "Church Feud: The Rematch",
+  "question": "",
+  "answers": [],
+  "teams": [
+    "Ladies",
+    "Gents"
+  ],
+  "intro": "The Gents lost 38–0 last week…",
+  "rounds": [
+    {
+      "at": 3.6,
+      "round": "Round 1",
+      "players": [
+        "Hlayi",
+        "Yakha"
+      ],
+      "question": "Name one of Jesus' twelve disciples.",
+      "answers": [
+        {
+          "a": "Peter",
+          "pts": 32,
+          "at": 7.45
+        },
+        {
+          "a": "John",
+          "pts": 18,
+          "at": 15.9
+        },
+        {
+          "a": "Judas",
+          "pts": 14,
+          "at": 16.15
+        },
+        {
+          "a": "Thomas",
+          "pts": 10
+        },
+        {
+          "a": "Matthew",
+          "pts": 9,
+          "at": 16.4
+        },
+        {
+          "a": "James",
+          "pts": 7,
+          "at": 16.65
+        },
+        {
+          "a": "Andrew",
+          "pts": 6
+        },
+        {
+          "a": "Philip",
+          "pts": 4
+        }
+      ],
+      "strikes": [
+        12.1
+      ],
+      "awards": [
+        {
+          "at": 17.0,
+          "team": 0
+        }
+      ]
+    },
+    {
+      "at": 18.37,
+      "round": "Round 2",
+      "players": [
+        "Dibuseng",
+        "Pastor Kyle"
+      ],
+      "question": "Name an animal mentioned in the Bible.",
+      "answers": [
+        {
+          "a": "Snake",
+          "pts": 26,
+          "at": 42.9
+        },
+        {
+          "a": "Lion",
+          "pts": 20,
+          "at": 43.15
+        },
+        {
+          "a": "Sheep",
+          "pts": 18,
+          "at": 43.4
+        },
+        {
+          "a": "Donkey",
+          "pts": 12,
+          "at": 26.55
+        },
+        {
+          "a": "Fish",
+          "pts": 9,
+          "at": 41.5
+        },
+        {
+          "a": "Dove",
+          "pts": 8,
+          "at": 43.65
+        },
+        {
+          "a": "Camel",
+          "pts": 5,
+          "at": 24.05
+        },
+        {
+          "a": "Pig",
+          "pts": 2,
+          "at": 30.45
+        }
+      ],
+      "strikes": [
+        32.6,
+        40.8
+      ],
+      "awards": [
+        {
+          "at": 44.2,
+          "team": 1
+        }
+      ]
+    },
+    {
+      "at": 45.57,
+      "round": "Round 3",
+      "players": [
+        "Tanatswa",
+        "Cwenga"
+      ],
+      "question": "Name one of the Ten Commandments.",
+      "answers": [
+        {
+          "a": "Do not murder",
+          "pts": 28,
+          "at": 50.52
+        },
+        {
+          "a": "Do not steal",
+          "pts": 22,
+          "at": 66.6
+        },
+        {
+          "a": "Honour your father and mother",
+          "pts": 16,
+          "at": 54.07
+        },
+        {
+          "a": "Do not commit adultery",
+          "pts": 12,
+          "at": 66.85
+        },
+        {
+          "a": "Keep the Sabbath holy",
+          "pts": 8,
+          "at": 61.52
+        },
+        {
+          "a": "No other gods",
+          "pts": 7,
+          "at": 67.1
+        },
+        {
+          "a": "Do not lie",
+          "pts": 5,
+          "at": 67.35
+        },
+        {
+          "a": "Do not covet",
+          "pts": 2,
+          "at": 66.27
+        }
+      ],
+      "strikes": [
+        55.67
+      ],
+      "awards": [
+        {
+          "at": 68.0,
+          "team": 1
+        }
+      ]
+    },
+    {
+      "at": 69.7,
+      "round": "Round 4",
+      "players": [
+        "Yinhla",
+        "Lehlohonolo"
+      ],
+      "question": "Name a miracle Jesus performed.",
+      "answers": [
+        {
+          "a": "Water into wine",
+          "pts": 26,
+          "at": 76.3
+        },
+        {
+          "a": "Feeding the 5,000",
+          "pts": 22,
+          "at": 86.9
+        },
+        {
+          "a": "Walking on water",
+          "pts": 18,
+          "at": 82.2
+        },
+        {
+          "a": "Raising Lazarus",
+          "pts": 14,
+          "at": 77.8
+        },
+        {
+          "a": "Healing the blind",
+          "pts": 10,
+          "at": 89.9
+        },
+        {
+          "a": "Calming the storm",
+          "pts": 6,
+          "at": 83.3
+        },
+        {
+          "a": "Healing a leper",
+          "pts": 4,
+          "at": 88.8
+        }
+      ],
+      "strikes": [],
+      "awards": [
+        {
+          "at": 90.9,
+          "team": 1
+        }
+      ]
+    }
+  ],
+  "video": "footage/feud-2026-10-28.mp4",
+  "durationInSeconds": 96.9,
+  "layout": "split",
+  "boardTop": 450,
+  "boardScale": 0.82,
+  "captionY": 1520,
+  "captions": [
+    {
+      "text": "He",
+      "start": 1.9,
+      "end": 2.13
+    },
+    {
+      "text": "said",
+      "start": 2.13,
+      "end": 2.37
+    },
+    {
+      "text": "Joseph!",
+      "start": 2.37,
+      "end": 2.6
+    },
+    {
+      "text": "He",
+      "start": 2.6,
+      "end": 2.9
+    },
+    {
+      "text": "said",
+      "start": 2.9,
+      "end": 3.2
+    },
+    {
+      "text": "Joseph!",
+      "start": 3.2,
+      "end": 3.5
+    },
+    {
+      "text": "Name",
+      "start": 3.82,
+      "end": 4.23
+    },
+    {
+      "text": "one",
+      "start": 4.23,
+      "end": 4.65
+    },
+    {
+      "text": "of",
+      "start": 4.65,
+      "end": 5.06
+    },
+    {
+      "text": "Jesus'",
+      "start": 5.06,
+      "end": 5.47
+    },
+    {
+      "text": "twelve",
+      "start": 5.47,
+      "end": 5.89
+    },
+    {
+      "text": "disciples.",
+      "start": 5.89,
+      "end": 6.3
+    },
+    {
+      "text": "Peter.",
+      "start": 7.36,
+      "end": 7.9
+    },
+    {
+      "text": "32",
+      "start": 8.16,
+      "end": 8.78
+    },
+    {
+      "text": "points!",
+      "start": 8.78,
+      "end": 9.4
+    },
+    {
+      "text": "He",
+      "start": 9.52,
+      "end": 9.96
+    },
+    {
+      "text": "has",
+      "start": 9.96,
+      "end": 10.41
+    },
+    {
+      "text": "to",
+      "start": 10.41,
+      "end": 10.86
+    },
+    {
+      "text": "answer.",
+      "start": 10.86,
+      "end": 11.3
+    },
+    {
+      "text": "Joseph.",
+      "start": 11.86,
+      "end": 12.5
+    },
+    {
+      "text": "No.",
+      "start": 13.2,
+      "end": 13.6
+    },
+    {
+      "text": "The",
+      "start": 13.74,
+      "end": 14.11
+    },
+    {
+      "text": "ladies",
+      "start": 14.11,
+      "end": 14.48
+    },
+    {
+      "text": "win",
+      "start": 14.48,
+      "end": 14.86
+    },
+    {
+      "text": "this",
+      "start": 14.86,
+      "end": 15.23
+    },
+    {
+      "text": "round.",
+      "start": 15.23,
+      "end": 15.6
+    },
+    {
+      "text": "And",
+      "start": 15.98,
+      "end": 16.36
+    },
+    {
+      "text": "the",
+      "start": 16.36,
+      "end": 16.75
+    },
+    {
+      "text": "guys",
+      "start": 16.75,
+      "end": 17.13
+    },
+    {
+      "text": "are",
+      "start": 17.13,
+      "end": 17.52
+    },
+    {
+      "text": "out.",
+      "start": 17.52,
+      "end": 17.9
+    },
+    {
+      "text": "So",
+      "start": 18.02,
+      "end": 18.37
+    },
+    {
+      "text": "the",
+      "start": 18.37,
+      "end": 18.73
+    },
+    {
+      "text": "question",
+      "start": 18.73,
+      "end": 19.08
+    },
+    {
+      "text": "is:",
+      "start": 19.08,
+      "end": 19.43
+    },
+    {
+      "text": "name",
+      "start": 19.43,
+      "end": 19.78
+    },
+    {
+      "text": "an",
+      "start": 19.78,
+      "end": 20.14
+    },
+    {
+      "text": "animal",
+      "start": 20.14,
+      "end": 20.49
+    },
+    {
+      "text": "mentioned",
+      "start": 20.49,
+      "end": 20.84
+    },
+    {
+      "text": "in",
+      "start": 20.84,
+      "end": 21.19
+    },
+    {
+      "text": "the",
+      "start": 21.19,
+      "end": 21.55
+    },
+    {
+      "text": "Bible.",
+      "start": 21.55,
+      "end": 21.9
+    },
+    {
+      "text": "Pretty",
+      "start": 22.02,
+      "end": 22.66
+    },
+    {
+      "text": "straightforward.",
+      "start": 22.66,
+      "end": 23.3
+    },
+    {
+      "text": "Camel.",
+      "start": 23.96,
+      "end": 24.5
+    },
+    {
+      "text": "Five",
+      "start": 25.5,
+      "end": 25.8
+    },
+    {
+      "text": "points.",
+      "start": 25.8,
+      "end": 26.1
+    },
+    {
+      "text": "Donkey.",
+      "start": 26.4,
+      "end": 26.9
+    },
+    {
+      "text": "The",
+      "start": 27.98,
+      "end": 28.25
+    },
+    {
+      "text": "more",
+      "start": 28.25,
+      "end": 28.52
+    },
+    {
+      "text": "popular,",
+      "start": 28.52,
+      "end": 28.79
+    },
+    {
+      "text": "the",
+      "start": 28.79,
+      "end": 29.06
+    },
+    {
+      "text": "more",
+      "start": 29.06,
+      "end": 29.33
+    },
+    {
+      "text": "points.",
+      "start": 29.33,
+      "end": 29.6
+    },
+    {
+      "text": "Pig,",
+      "start": 30.36,
+      "end": 30.57
+    },
+    {
+      "text": "two",
+      "start": 30.57,
+      "end": 30.79
+    },
+    {
+      "text": "points.",
+      "start": 30.79,
+      "end": 31.0
+    },
+    {
+      "text": "Horse?",
+      "start": 31.5,
+      "end": 32.1
+    },
+    {
+      "text": "No,",
+      "start": 32.3,
+      "end": 32.59
+    },
+    {
+      "text": "there's",
+      "start": 32.59,
+      "end": 32.88
+    },
+    {
+      "text": "no",
+      "start": 32.88,
+      "end": 33.16
+    },
+    {
+      "text": "horse,",
+      "start": 33.16,
+      "end": 33.45
+    },
+    {
+      "text": "she",
+      "start": 33.45,
+      "end": 33.74
+    },
+    {
+      "text": "says",
+      "start": 33.74,
+      "end": 34.02
+    },
+    {
+      "text": "no",
+      "start": 34.02,
+      "end": 34.31
+    },
+    {
+      "text": "horse.",
+      "start": 34.31,
+      "end": 34.6
+    },
+    {
+      "text": "She",
+      "start": 35.7,
+      "end": 35.97
+    },
+    {
+      "text": "said",
+      "start": 35.97,
+      "end": 36.23
+    },
+    {
+      "text": "horse!",
+      "start": 36.23,
+      "end": 36.5
+    },
+    {
+      "text": "She",
+      "start": 37.8,
+      "end": 38.07
+    },
+    {
+      "text": "said",
+      "start": 38.07,
+      "end": 38.33
+    },
+    {
+      "text": "horse!",
+      "start": 38.33,
+      "end": 38.6
+    },
+    {
+      "text": "A",
+      "start": 40.02,
+      "end": 40.51
+    },
+    {
+      "text": "caterpillar?",
+      "start": 40.51,
+      "end": 41.0
+    },
+    {
+      "text": "Fish!",
+      "start": 41.42,
+      "end": 41.9
+    },
+    {
+      "text": "Fish!",
+      "start": 42.0,
+      "end": 45.97
+    },
+    {
+      "text": "Okay,",
+      "start": 45.69,
+      "end": 46.02
+    },
+    {
+      "text": "Fish!",
+      "start": 45.97,
+      "end": 47.17
+    },
+    {
+      "text": "so",
+      "start": 46.02,
+      "end": 46.36
+    },
+    {
+      "text": "the",
+      "start": 46.36,
+      "end": 46.69
+    },
+    {
+      "text": "question",
+      "start": 46.69,
+      "end": 47.03
+    },
+    {
+      "text": "is:",
+      "start": 47.03,
+      "end": 47.36
+    },
+    {
+      "text": "name",
+      "start": 47.36,
+      "end": 47.7
+    },
+    {
+      "text": "one",
+      "start": 47.7,
+      "end": 48.03
+    },
+    {
+      "text": "of",
+      "start": 48.03,
+      "end": 48.37
+    },
+    {
+      "text": "the",
+      "start": 48.37,
+      "end": 48.7
+    },
+    {
+      "text": "Ten",
+      "start": 48.7,
+      "end": 49.04
+    },
+    {
+      "text": "Commandments.",
+      "start": 49.04,
+      "end": 49.37
+    },
+    {
+      "text": "Do",
+      "start": 50.41,
+      "end": 50.56
+    },
+    {
+      "text": "not",
+      "start": 50.56,
+      "end": 50.72
+    },
+    {
+      "text": "kill.",
+      "start": 50.72,
+      "end": 50.87
+    },
+    {
+      "text": "Top",
+      "start": 51.71,
+      "end": 52.08
+    },
+    {
+      "text": "answer,",
+      "start": 52.08,
+      "end": 52.44
+    },
+    {
+      "text": "28",
+      "start": 52.44,
+      "end": 52.8
+    },
+    {
+      "text": "points.",
+      "start": 52.8,
+      "end": 53.17
+    },
+    {
+      "text": "Honour",
+      "start": 53.85,
+      "end": 54.02
+    },
+    {
+      "text": "your",
+      "start": 54.02,
+      "end": 54.2
+    },
+    {
+      "text": "parents.",
+      "start": 54.2,
+      "end": 54.37
+    },
+    {
+      "text": "Love",
+      "start": 55.19,
+      "end": 55.42
+    },
+    {
+      "text": "your",
+      "start": 55.42,
+      "end": 55.64
+    },
+    {
+      "text": "neighbours…",
+      "start": 55.64,
+      "end": 55.87
+    },
+    {
+      "text": "I",
+      "start": 56.01,
+      "end": 56.41
+    },
+    {
+      "text": "want",
+      "start": 56.41,
+      "end": 56.82
+    },
+    {
+      "text": "to",
+      "start": 56.82,
+      "end": 57.22
+    },
+    {
+      "text": "say",
+      "start": 57.22,
+      "end": 57.63
+    },
+    {
+      "text": "the",
+      "start": 57.63,
+      "end": 58.03
+    },
+    {
+      "text": "one",
+      "start": 58.03,
+      "end": 58.44
+    },
+    {
+      "text": "where",
+      "start": 58.44,
+      "end": 58.84
+    },
+    {
+      "text": "they",
+      "start": 58.84,
+      "end": 59.24
+    },
+    {
+      "text": "say",
+      "start": 59.24,
+      "end": 59.65
+    },
+    {
+      "text": "there",
+      "start": 59.65,
+      "end": 60.05
+    },
+    {
+      "text": "should",
+      "start": 60.05,
+      "end": 60.46
+    },
+    {
+      "text": "be",
+      "start": 60.46,
+      "end": 60.86
+    },
+    {
+      "text": "a",
+      "start": 60.86,
+      "end": 61.27
+    },
+    {
+      "text": "Sabbath…",
+      "start": 61.27,
+      "end": 61.67
+    },
+    {
+      "text": "What",
+      "start": 61.77,
+      "end": 61.92
+    },
+    {
+      "text": "does",
+      "start": 61.92,
+      "end": 62.07
+    },
+    {
+      "text": "Sabbath",
+      "start": 62.07,
+      "end": 62.22
+    },
+    {
+      "text": "mean?",
+      "start": 62.22,
+      "end": 62.37
+    },
+    {
+      "text": "C-O-V-E-T.",
+      "start": 65.45,
+      "end": 66.27
+    },
+    {
+      "text": "V-E-T…",
+      "start": 66.8,
+      "end": 68.6
+    },
+    {
+      "text": "Okay,",
+      "start": 69.84,
+      "end": 70.31
+    },
+    {
+      "text": "so",
+      "start": 70.31,
+      "end": 70.79
+    },
+    {
+      "text": "the",
+      "start": 70.79,
+      "end": 71.26
+    },
+    {
+      "text": "question",
+      "start": 71.26,
+      "end": 71.74
+    },
+    {
+      "text": "is:",
+      "start": 71.74,
+      "end": 72.21
+    },
+    {
+      "text": "name",
+      "start": 72.21,
+      "end": 72.68
+    },
+    {
+      "text": "a",
+      "start": 72.68,
+      "end": 73.16
+    },
+    {
+      "text": "miracle",
+      "start": 73.16,
+      "end": 73.63
+    },
+    {
+      "text": "Jesus",
+      "start": 73.63,
+      "end": 74.1
+    },
+    {
+      "text": "performed",
+      "start": 74.1,
+      "end": 74.58
+    },
+    {
+      "text": "in",
+      "start": 74.58,
+      "end": 75.05
+    },
+    {
+      "text": "the",
+      "start": 75.05,
+      "end": 75.53
+    },
+    {
+      "text": "Bible.",
+      "start": 75.53,
+      "end": 76.0
+    },
+    {
+      "text": "Water",
+      "start": 76.08,
+      "end": 76.32
+    },
+    {
+      "text": "to",
+      "start": 76.32,
+      "end": 76.56
+    },
+    {
+      "text": "wine!",
+      "start": 76.56,
+      "end": 76.8
+    },
+    {
+      "text": "Yeah,",
+      "start": 76.98,
+      "end": 77.59
+    },
+    {
+      "text": "14",
+      "start": 77.59,
+      "end": 78.19
+    },
+    {
+      "text": "points.",
+      "start": 78.19,
+      "end": 78.8
+    },
+    {
+      "text": "Walked",
+      "start": 82.0,
+      "end": 82.27
+    },
+    {
+      "text": "on",
+      "start": 82.27,
+      "end": 82.53
+    },
+    {
+      "text": "water.",
+      "start": 82.53,
+      "end": 82.8
+    },
+    {
+      "text": "Calm",
+      "start": 82.92,
+      "end": 83.55
+    },
+    {
+      "text": "the",
+      "start": 83.55,
+      "end": 84.17
+    },
+    {
+      "text": "storm.",
+      "start": 84.17,
+      "end": 84.8
+    },
+    {
+      "text": "How",
+      "start": 85.16,
+      "end": 85.37
+    },
+    {
+      "text": "many",
+      "start": 85.37,
+      "end": 85.57
+    },
+    {
+      "text": "did",
+      "start": 85.57,
+      "end": 85.78
+    },
+    {
+      "text": "we",
+      "start": 85.78,
+      "end": 85.98
+    },
+    {
+      "text": "get",
+      "start": 85.98,
+      "end": 86.19
+    },
+    {
+      "text": "for",
+      "start": 86.19,
+      "end": 86.39
+    },
+    {
+      "text": "that?",
+      "start": 86.39,
+      "end": 86.6
+    },
+    {
+      "text": "22",
+      "start": 86.76,
+      "end": 87.01
+    },
+    {
+      "text": "points",
+      "start": 87.01,
+      "end": 87.25
+    },
+    {
+      "text": "for",
+      "start": 87.25,
+      "end": 87.5
+    },
+    {
+      "text": "that!",
+      "start": 87.5,
+      "end": 87.75
+    },
+    {
+      "text": "He",
+      "start": 87.76,
+      "end": 88.17
+    },
+    {
+      "text": "healed",
+      "start": 88.17,
+      "end": 88.59
+    },
+    {
+      "text": "leprosy.",
+      "start": 88.59,
+      "end": 89.0
+    },
+    {
+      "text": "But",
+      "start": 94.06,
+      "end": 94.25
+    },
+    {
+      "text": "the",
+      "start": 94.25,
+      "end": 94.44
+    },
+    {
+      "text": "rest",
+      "start": 94.44,
+      "end": 94.62
+    },
+    {
+      "text": "we",
+      "start": 94.62,
+      "end": 94.81
+    },
+    {
+      "text": "won.",
+      "start": 94.81,
+      "end": 95.0
+    }
+  ],
+  "stamps": [
+    {
+      "at": 0.3,
+      "text": "The Rematch",
+      "tone": "gold",
+      "duration": 3.1
+    },
+    {
+      "at": 17.2,
+      "text": "Ladies take it!",
+      "tone": "gold",
+      "duration": 1.1
+    },
+    {
+      "at": 44.25,
+      "text": "Gents take it!",
+      "tone": "green",
+      "duration": 1.2
+    },
+    {
+      "at": 68.1,
+      "text": "Gents take it!",
+      "tone": "green",
+      "duration": 1.5
+    },
+    {
+      "at": 92.3,
+      "text": "Gents win!",
+      "tone": "green",
+      "duration": 2.3
+    },
+    {
+      "at": 94.7,
+      "text": "Series: 1–1",
+      "tone": "gold",
+      "duration": 2.200000000000003
+    }
+  ]
+}
