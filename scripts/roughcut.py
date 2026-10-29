@@ -100,8 +100,10 @@ def main():
             json.dump({"starts": starts, "lengths": lengths}, f)
 
         inputs = sum((["-i", p] for p in pieces), [])
-        labels = "".join(f"[{n}:v][{n}:a]" for n in range(len(pieces)))
-        graph = f"{labels}concat=n={len(pieces)}:v=1:a=1[v][acat];[acat]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
+        # Fit each piece's audio to its picture exactly; otherwise the join drifts a little at every cut.
+        fit = "".join(f"[{n}:a]apad,atrim=end={L:.6f},asetpts=PTS-STARTPTS[fa{n}];" for n, L in enumerate(lengths))
+        labels = "".join(f"[{n}:v][fa{n}]" for n in range(len(pieces)))
+        graph = f"{fit}{labels}concat=n={len(pieces)}:v=1:a=1[v][acat];[acat]loudnorm=I=-14:TP=-1.5:LRA=11,aresample=48000[a]"
         subprocess.run([*ff, *inputs, "-filter_complex", graph, "-map", "[v]", "-map", "[a]",
                         "-c:v", "libx264", "-preset", "medium", "-crf", "17", "-pix_fmt", "yuv420p",
                         "-c:a", "aac", "-b:a", "192k", "-movflags", "+faststart", args.out], check=True)
