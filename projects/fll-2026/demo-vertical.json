@@ -1,0 +1,205 @@
+{
+  "bpm": 123,
+  "music": {
+    "src": "footage/fll/raving-energy.mp3",
+    "from": 28.58,
+    "volume": 0.9
+  },
+  "durationInSeconds": 17.56,
+  "shots": [
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 84.95,
+      "beats": 3,
+      "x": 0.42,
+      "in": "cut",
+      "rate": 0.5,
+      "push": [
+        1.12,
+        1.22
+      ]
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 81.1,
+      "beats": 2,
+      "x": 0.3,
+      "in": "flash"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 83.2,
+      "beats": 1,
+      "x": 0.35,
+      "in": "punch"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 97.0,
+      "beats": 2,
+      "x": 0.55,
+      "in": "whip",
+      "rate": 0.6
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 77.2,
+      "beats": 2,
+      "x": 0.6,
+      "in": "cut"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 49.0,
+      "beats": 2,
+      "x": 0.45,
+      "in": "whip"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 102.0,
+      "beats": 2,
+      "x": 0.35,
+      "in": "punch"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 104.0,
+      "beats": 1,
+      "x": 0.42,
+      "in": "cut"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 55.0,
+      "beats": 2,
+      "x": 0.3,
+      "in": "whip"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 89.6,
+      "beats": 2,
+      "x": 0.45,
+      "in": "punch"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 116.0,
+      "beats": 2,
+      "x": 0.5,
+      "in": "whip"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 110.9,
+      "beats": 1,
+      "x": 0.5,
+      "in": "cut"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 121.0,
+      "beats": 2,
+      "x": 0.4,
+      "in": "punch"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 123.4,
+      "beats": 2,
+      "x": 0.5,
+      "in": "whip"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 132.2,
+      "beats": 2,
+      "x": 0.5,
+      "in": "flash"
+    },
+    {
+      "src": "footage/fll/fll-2025.mp4",
+      "from": 134.0,
+      "beats": 4,
+      "x": 0.36,
+      "in": "cut",
+      "push": [
+        1.0,
+        1.08
+      ]
+    }
+  ],
+  "titles": [
+    {
+      "beat": 0.5,
+      "beats": 2.4,
+      "lines": [
+        "FIRST LEGO",
+        "LEAGUE",
+        "Eastern Cape Regional"
+      ],
+      "kind": "hero",
+      "y": 0.44
+    },
+    {
+      "beat": 5,
+      "beats": 2,
+      "lines": [
+        "Build."
+      ],
+      "kind": "stack"
+    },
+    {
+      "beat": 7,
+      "beats": 2,
+      "lines": [
+        "Code."
+      ],
+      "kind": "stack"
+    },
+    {
+      "beat": 9,
+      "beats": 2,
+      "lines": [
+        "Compete."
+      ],
+      "kind": "stack"
+    },
+    {
+      "beat": 14,
+      "beats": 4,
+      "lines": [
+        "The Robot Game",
+        "Design · Build · Program"
+      ],
+      "kind": "tag"
+    },
+    {
+      "beat": 20,
+      "beats": 4,
+      "lines": [
+        "Core Values",
+        "Teamwork · Creativity"
+      ],
+      "kind": "tag"
+    },
+    {
+      "beat": 26,
+      "beats": 3,
+      "lines": [
+        "Ages 9–16",
+        "STEM in action"
+      ],
+      "kind": "tag"
+    }
+  ],
+  "endCard": {
+    "beat": 32,
+    "logo": "brand/fll/fll-logo.png",
+    "lines": [
+      "Eastern Cape Regional",
+      "31 October 2026 · Nelson Mandela University"
+    ]
+  }
+}
