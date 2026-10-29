@@ -6,6 +6,8 @@ Times are seconds or mm:ss(.ms). Lines starting with # are ignored. The optional
 zoom punches in on a point given as fractions of the frame, e.g. 1.5 0.5 0.6.
 
   python3 scripts/roughcut.py cuts.txt public/footage/tenable.mp4 --crop-x 0.5
+
+Writes public/footage/tenable.segments.json with where each segment starts in the cut.
 """
 import argparse
 import json
@@ -86,6 +88,16 @@ def main():
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "12", "-pix_fmt", "yuv420p",
                             "-c:a", "pcm_s16le", piece], check=True)
             pieces.append(piece)
+
+        # Record each piece's real length (frame rounding adds up over many cuts) so timings can follow it.
+        lengths = []
+        for piece in pieces:
+            frames = subprocess.check_output(["ffprobe", "-v", "error", "-select_streams", "v:0", "-count_packets",
+                                              "-show_entries", "stream=nb_read_packets", "-of", "csv=p=0", piece], text=True)
+            lengths.append(int(frames.strip().rstrip(",")) / 30)
+        starts = [round(sum(lengths[:i]), 3) for i in range(len(lengths))]
+        with open(os.path.splitext(args.out)[0] + ".segments.json", "w") as f:
+            json.dump({"starts": starts, "lengths": lengths}, f)
 
         inputs = sum((["-i", p] for p in pieces), [])
         labels = "".join(f"[{n}:v][{n}:a]" for n in range(len(pieces)))
