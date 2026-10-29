@@ -83,8 +83,8 @@ def main():
             fade = min(0.03, d / 4)  # avoids clicks at hard cuts
             piece = os.path.join(tmp, f"{n:03d}.mkv")
             subprocess.run([*ff, "-ss", f"{a}", "-t", f"{d}", "-i", src,
-                            "-vf", f"{crop}scale=1080:1920,fps=30,setsar=1{grade}",
-                            "-af", f"aresample=48000{level},afade=t=in:d={fade},afade=t=out:st={d - fade:.3f}:d={fade}",
+                            "-vf", f"setpts=PTS-STARTPTS,{crop}scale=1080:1920,fps=30,setsar=1{grade}",
+                            "-af", f"asetpts=PTS-STARTPTS,aresample=48000{level},afade=t=in:d={fade},afade=t=out:st={d - fade:.3f}:d={fade}",
                             "-c:v", "libx264", "-preset", "veryfast", "-crf", "12", "-pix_fmt", "yuv420p",
                             "-c:a", "pcm_s16le", piece], check=True)
             pieces.append(piece)
