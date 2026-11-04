@@ -126,10 +126,10 @@ def main():
         for team, opt, _ in picks:
             if opt == q[2]:
                 total[team] += 1
-    final_at = round(end - 3.2, 2)
+    final_at = round(max(matchups[-1]["revealAt"] + 0.9, end - 3.6), 2)
     if total:
         text = "It's a draw!" if total[0] == total[1] else ("Ladies win!" if total[0] > total[1] else "Gents win!")
-        stamps.append({"at": final_at, "text": f"{text} {total[0]}–{total[1]}", "tone": "gold", "duration": 3.2})
+        stamps.append({"at": final_at, "text": f"{text} {max(total)}–{min(total)}", "tone": "gold", "duration": round(end - final_at, 2)})
 
     words = {c: load_words(tdir, c) for c in {s[1] for s in segs}}
     caps = []
