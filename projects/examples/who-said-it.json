@@ -1,0 +1,12 @@
+{
+  "title": "Who Said It?",
+  "teams": ["Ladies", "Gents"],
+  "durationInSeconds": 12,
+  "boardTop": 440,
+  "boardScale": 0.86,
+  "matchups": [
+    {"at": 0.5, "players": ["Kamva", "Wilbert"], "quote": "Lord, do not hold this sin against them.", "options": ["Stephen", "Paul", "Peter", "James"], "answer": 0, "ref": "Acts 7:60",
+     "picks": [{"team": 1, "option": 0, "at": 4}, {"team": 0, "option": 1, "at": 6}], "revealAt": 8}
+  ],
+  "stamps": [{"at": 8.3, "text": "Correct!", "tone": "green", "duration": 1.5}]
+}
