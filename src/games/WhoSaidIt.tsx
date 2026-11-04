@@ -24,6 +24,8 @@ type Matchup = {
   note?: string;
   picks: Pick[];
   revealAt: number;
+  noScore?: boolean; // e.g. a question both got right before a tiebreaker
+  label?: string; // banner text instead of "Matchup n"
 };
 
 export type WhoSaidItProps = Common & {
@@ -40,7 +42,7 @@ const LETTERS = ["A", "B", "C", "D"];
 
 // A matchup is won by whoever picked the right answer; if both did, both score.
 const won = (m: Matchup, t: number) =>
-  t < m.revealAt ? [0, 0] : [0, 1].map((team) => (m.picks.some((p) => p.team === team && p.option === m.answer) ? 1 : 0));
+  m.noScore || t < m.revealAt ? [0, 0] : [0, 1].map((team) => (m.picks.some((p) => p.team === team && p.option === m.answer) ? 1 : 0));
 
 const Board: React.FC<{ m: Matchup; t: number; teams: [string, string]; score: number[] }> = ({ m, t, teams, score }) => {
   const qk = since(t, m.quoteAt ?? m.at, 0.4);
@@ -109,7 +111,7 @@ export const WhoSaidIt: React.FC<WhoSaidItProps> = (p) => {
         <div style={{ background: C.cream, borderRadius: 22, padding: "14px 30px", textAlign: "center", boxShadow: "0 10px 30px rgba(0,0,0,.35)" }}>
           {m ? (
             <div style={{ fontFamily: FONT.display, fontWeight: 800, fontSize: 36, color: C.ink }}>
-              <span style={{ color: C.ember, letterSpacing: 2 }}>MATCHUP {idx + 1} · </span>
+              <span style={{ color: C.ember, letterSpacing: 2 }}>{(m.label ?? `Matchup ${idx + 1}`).toUpperCase()} · </span>
               {m.players[0]} vs {m.players[1]}
             </div>
           ) : (

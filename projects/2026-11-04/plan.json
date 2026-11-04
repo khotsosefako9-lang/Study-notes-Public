@@ -1,0 +1,442 @@
+{
+  "_doc": "Who Said It?, Ladies vs Gents decider, 4 Nov 2026. Times are source seconds in each clip. build.py turns this into the cut list and props.",
+  "zoom": [
+    1.35,
+    0.5,
+    0.72
+  ],
+  "matchup5CainBy": null,
+  "rounds": [
+    {
+      "clip": "194414",
+      "hook": true,
+      "segments": [
+        [
+          29.2,
+          32.6
+        ]
+      ]
+    },
+    {
+      "clip": "194023",
+      "players": [
+        "Kamva",
+        "Wilbert"
+      ],
+      "q": 12,
+      "rules": [
+        4.0,
+        5.6
+      ],
+      "segments": [
+        [
+          4.0,
+          5.6
+        ],
+        [
+          18.9,
+          22.4
+        ],
+        [
+          23.6,
+          25.3
+        ],
+        [
+          26.0,
+          27.8
+        ],
+        [
+          47.9,
+          50.95
+        ]
+      ],
+      "quoteAt": 19.1,
+      "optionsAt": 21.9,
+      "picks": [
+        [
+          1,
+          0,
+          23.7
+        ],
+        [
+          0,
+          1,
+          27.6
+        ]
+      ],
+      "revealAt": 50.0
+    },
+    {
+      "clip": "194209",
+      "players": [
+        "Hlayi",
+        "Matimba"
+      ],
+      "q": 6,
+      "segments": [
+        [
+          21.5,
+          30.0
+        ],
+        [
+          31.5,
+          38.4
+        ],
+        [
+          40.3,
+          41.2
+        ],
+        [
+          48.8,
+          54.2
+        ]
+      ],
+      "quoteAt": 21.6,
+      "optionsAt": 31.6,
+      "picks": [
+        [
+          0,
+          0,
+          40.5
+        ],
+        [
+          1,
+          2,
+          51.0
+        ]
+      ],
+      "revealAt": 53.6
+    },
+    {
+      "clip": "194414",
+      "players": [
+        "Siwa",
+        "Francis"
+      ],
+      "q": 2,
+      "segments": [
+        [
+          0.0,
+          7.4
+        ],
+        [
+          29.2,
+          36.0
+        ],
+        [
+          37.6,
+          43.4
+        ],
+        [
+          53.8,
+          58.4
+        ],
+        [
+          61.1,
+          63.7
+        ]
+      ],
+      "quoteAt": 2.9,
+      "optionsAt": 7.0,
+      "picks": [
+        [
+          0,
+          2,
+          41.0
+        ],
+        [
+          1,
+          0,
+          43.0
+        ]
+      ],
+      "revealAt": 56.1
+    },
+    {
+      "clip": "194510",
+      "players": [
+        "Dibuseng",
+        "Dylan"
+      ],
+      "q": 3,
+      "segments": [
+        [
+          6.0,
+          19.6
+        ],
+        [
+          20.6,
+          23.2
+        ],
+        [
+          26.3,
+          27.0
+        ],
+        [
+          29.3,
+          39.6
+        ]
+      ],
+      "quoteAt": 8.4,
+      "optionsAt": 12.3,
+      "picks": [
+        [
+          1,
+          0,
+          20.8
+        ],
+        [
+          0,
+          3,
+          26.4
+        ]
+      ],
+      "revealAt": 31.8
+    },
+    {
+      "clip": "194618",
+      "players": [
+        "Shanequa",
+        "Marko"
+      ],
+      "q": 0,
+      "segments": [
+        [
+          0.0,
+          14.6
+        ],
+        [
+          16.3,
+          18.9
+        ],
+        [
+          20.2,
+          21.5
+        ],
+        [
+          23.6,
+          29.2
+        ]
+      ],
+      "quoteAt": 3.5,
+      "optionsAt": 7.2,
+      "picks": "matchup5",
+      "revealAt": 25.9
+    },
+    {
+      "clip": "194803",
+      "players": [
+        "Izzy",
+        "Leon"
+      ],
+      "q": 13,
+      "segments": [
+        [
+          0.0,
+          11.0
+        ],
+        [
+          12.6,
+          20.7
+        ],
+        [
+          48.9,
+          50.4
+        ],
+        [
+          51.3,
+          54.6
+        ],
+        [
+          57.0,
+          59.95
+        ]
+      ],
+      "quoteAt": 5.0,
+      "optionsAt": 12.7,
+      "picks": [
+        [
+          1,
+          2,
+          49.0
+        ],
+        [
+          0,
+          0,
+          50.1
+        ]
+      ],
+      "revealAt": 59.1
+    },
+    {
+      "clip": "195009",
+      "players": [
+        "Ladies",
+        "Khaka"
+      ],
+      "q": 14,
+      "segments": [
+        [
+          0.0,
+          7.7
+        ],
+        [
+          9.9,
+          17.7
+        ],
+        [
+          19.8,
+          21.1
+        ],
+        [
+          25.9,
+          26.6
+        ],
+        [
+          32.7,
+          33.4
+        ],
+        [
+          38.4,
+          42.7
+        ]
+      ],
+      "quoteAt": 3.5,
+      "optionsAt": 9.9,
+      "picks": [
+        [
+          1,
+          0,
+          19.9
+        ],
+        [
+          0,
+          1,
+          32.8
+        ]
+      ],
+      "revealAt": 41.0
+    },
+    {
+      "clip": "195338",
+      "players": [
+        "Dibuseng",
+        "Wakhile"
+      ],
+      "q": 9,
+      "noScore": true,
+      "label": "Matchup 8",
+      "segments": [
+        [
+          15.0,
+          27.5
+        ],
+        [
+          33.3,
+          36.6
+        ]
+      ],
+      "quoteAt": 17.5,
+      "optionsAt": 21.5,
+      "picks": [
+        [
+          0,
+          0,
+          26.9
+        ],
+        [
+          1,
+          0,
+          27.1
+        ]
+      ],
+      "revealAt": 33.5
+    },
+    {
+      "clip": "195338",
+      "players": [
+        "Dibuseng",
+        "Wakhile"
+      ],
+      "q": 1,
+      "label": "Matchup 8 · Tiebreaker",
+      "segments": [
+        [
+          40.8,
+          53.2
+        ],
+        [
+          59.9,
+          61.1
+        ],
+        [
+          92.4,
+          95.0
+        ],
+        [
+          100.0,
+          103.0
+        ]
+      ],
+      "quoteAt": 43.2,
+      "optionsAt": 46.2,
+      "picks": [
+        [
+          0,
+          1,
+          94.6
+        ],
+        [
+          1,
+          2,
+          61.0
+        ]
+      ],
+      "revealAt": 102.0
+    }
+  ],
+  "fixes": {
+    "194023": {
+      "Stefan": "Stephen",
+      "Stefan?": "Stephen?",
+      "me.": "them."
+    },
+    "194209": {
+      "Hemanth.": "Haman."
+    },
+    "194414": {
+      "-1.": "",
+      "2": "2–1.",
+      "–1.": ""
+    },
+    "194510": {
+      "son": "Son",
+      "-1": "",
+      "His": "The",
+      "3": "3–1",
+      "–1": ""
+    },
+    "194618": {
+      "K.": "Cain."
+    },
+    "194803": {
+      "Merry": "Mary,",
+      "objects.": "options."
+    },
+    "195009": {
+      "Joe?": "Job?",
+      "teacher?": "Teacher?",
+      "teacher": "Teacher",
+      "Aaaaaah!": "Aaah!"
+    },
+    "195338": {
+      "isaiah": "Isaiah",
+      "i'm": "I'm",
+      "i": "I",
+      "son": "Son",
+      "so": "So",
+      "you": "you",
+      "did": "Did"
+    }
+  }
+}

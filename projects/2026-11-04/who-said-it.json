@@ -1,0 +1,2072 @@
+{
+  "title": "Who Said It? The Decider",
+  "teams": [
+    "Ladies",
+    "Gents"
+  ],
+  "intro": "Series tied 1–1. This one decides it…",
+  "rules": {
+    "at": 3.5,
+    "until": 7.2,
+    "lines": [
+      "One Lady vs one Gent",
+      "A famous Bible quote, four names",
+      "Pick who said it",
+      "Right answer = 1 point"
+    ]
+  },
+  "matchups": [
+    {
+      "at": 3.4,
+      "players": [
+        "Kamva",
+        "Wilbert"
+      ],
+      "quote": "Lord, do not hold this sin against them.",
+      "options": [
+        "Stephen",
+        "Paul",
+        "Peter",
+        "James"
+      ],
+      "answer": 0,
+      "ref": "Acts 7:60",
+      "quoteAt": 5.2,
+      "optionsAt": 8.0,
+      "picks": [
+        {
+          "team": 1,
+          "option": 0,
+          "at": 8.6
+        },
+        {
+          "team": 0,
+          "option": 1,
+          "at": 11.8
+        }
+      ],
+      "revealAt": 14.1
+    },
+    {
+      "at": 15.07,
+      "players": [
+        "Hlayi",
+        "Matimba"
+      ],
+      "quote": "And who knows but that you have come to your royal position for such a time as this?",
+      "options": [
+        "Mordecai",
+        "Esther",
+        "King Xerxes",
+        "Haman"
+      ],
+      "answer": 0,
+      "ref": "Esther 4:14",
+      "quoteAt": 15.17,
+      "optionsAt": 23.7,
+      "picks": [
+        {
+          "team": 0,
+          "option": 0,
+          "at": 30.73
+        },
+        {
+          "team": 1,
+          "option": 2,
+          "at": 33.63
+        }
+      ],
+      "revealAt": 36.23
+    },
+    {
+      "at": 36.83,
+      "players": [
+        "Siwa",
+        "Francis"
+      ],
+      "quote": "Where you go I will go, and where you stay I will stay.",
+      "options": [
+        "Ruth",
+        "Naomi",
+        "Esther",
+        "Orpah"
+      ],
+      "answer": 0,
+      "ref": "Ruth 1:16",
+      "quoteAt": 39.73,
+      "optionsAt": 43.83,
+      "picks": [
+        {
+          "team": 0,
+          "option": 2,
+          "at": 54.5
+        },
+        {
+          "team": 1,
+          "option": 0,
+          "at": 56.5
+        }
+      ],
+      "revealAt": 59.2
+    },
+    {
+      "at": 64.1,
+      "players": [
+        "Dibuseng",
+        "Dylan"
+      ],
+      "quote": "Surely this man was the Son of God!",
+      "options": [
+        "A Roman centurion",
+        "Peter",
+        "Pontius Pilate",
+        "Thomas"
+      ],
+      "answer": 0,
+      "ref": "Mark 15:39",
+      "quoteAt": 66.5,
+      "optionsAt": 70.4,
+      "picks": [
+        {
+          "team": 1,
+          "option": 0,
+          "at": 77.9
+        },
+        {
+          "team": 0,
+          "option": 3,
+          "at": 80.4
+        }
+      ],
+      "revealAt": 83.5
+    },
+    {
+      "at": 91.33,
+      "players": [
+        "Shanequa",
+        "Marko"
+      ],
+      "quote": "Am I my brother's keeper?",
+      "options": [
+        "Cain",
+        "Abel",
+        "Adam",
+        "Esau"
+      ],
+      "answer": 0,
+      "ref": "Genesis 4:9",
+      "quoteAt": 94.83,
+      "optionsAt": 98.53,
+      "picks": [],
+      "revealAt": 112.13
+    },
+    {
+      "at": 115.43,
+      "players": [
+        "Izzy",
+        "Leon"
+      ],
+      "quote": "I am the Lord's servant. May your word to me be fulfilled.",
+      "options": [
+        "Mary, mother of Jesus",
+        "Elizabeth",
+        "Hannah",
+        "Anna"
+      ],
+      "answer": 0,
+      "ref": "Luke 1:38",
+      "quoteAt": 120.43,
+      "optionsAt": 126.57,
+      "picks": [
+        {
+          "team": 1,
+          "option": 2,
+          "at": 134.7
+        },
+        {
+          "team": 0,
+          "option": 0,
+          "at": 135.8
+        }
+      ],
+      "revealAt": 141.5
+    },
+    {
+      "at": 142.37,
+      "players": [
+        "Ladies",
+        "Khaka"
+      ],
+      "quote": "Meaningless! Meaningless! Everything is meaningless.",
+      "options": [
+        "The Teacher",
+        "Job",
+        "Jonah",
+        "Jeremiah"
+      ],
+      "answer": 0,
+      "ref": "Ecclesiastes 1:2",
+      "quoteAt": 145.87,
+      "optionsAt": 150.1,
+      "picks": [
+        {
+          "team": 1,
+          "option": 0,
+          "at": 158.03
+        },
+        {
+          "team": 0,
+          "option": 1,
+          "at": 160.03
+        }
+      ],
+      "revealAt": 163.23
+    },
+    {
+      "at": 164.93,
+      "players": [
+        "Dibuseng",
+        "Wakhile"
+      ],
+      "quote": "You are the Messiah, the Son of the living God.",
+      "options": [
+        "Peter",
+        "John",
+        "Andrew",
+        "James"
+      ],
+      "answer": 0,
+      "ref": "Matthew 16:16",
+      "quoteAt": 167.43,
+      "optionsAt": 171.43,
+      "picks": [
+        {
+          "team": 0,
+          "option": 0,
+          "at": 176.83
+        },
+        {
+          "team": 1,
+          "option": 0,
+          "at": 177.03
+        }
+      ],
+      "revealAt": 177.63,
+      "noScore": true,
+      "label": "Matchup 8"
+    },
+    {
+      "at": 180.73,
+      "players": [
+        "Dibuseng",
+        "Wakhile"
+      ],
+      "quote": "Here am I. Send me!",
+      "options": [
+        "Isaiah",
+        "Jeremiah",
+        "Moses",
+        "Samuel"
+      ],
+      "answer": 0,
+      "ref": "Isaiah 6:8",
+      "quoteAt": 183.13,
+      "optionsAt": 186.13,
+      "picks": [
+        {
+          "team": 0,
+          "option": 1,
+          "at": 196.53
+        },
+        {
+          "team": 1,
+          "option": 2,
+          "at": 194.23
+        }
+      ],
+      "revealAt": 198.93,
+      "label": "Matchup 8 · Tiebreaker"
+    }
+  ],
+  "video": "footage/who-said-it-2026-11-04.mp4",
+  "durationInSeconds": 199.93,
+  "boardTop": 440,
+  "boardScale": 0.84,
+  "captionY": 1560,
+  "captions": [
+    {
+      "text": "Oprah?",
+      "start": 0.06,
+      "end": 0.5
+    },
+    {
+      "text": "Is",
+      "start": 0.86,
+      "end": 0.86
+    },
+    {
+      "text": "it",
+      "start": 0.86,
+      "end": 1.08
+    },
+    {
+      "text": "Oprah?",
+      "start": 1.08,
+      "end": 1.82
+    },
+    {
+      "text": "Oprah?",
+      "start": 2.06,
+      "end": 2.08
+    },
+    {
+      "text": "I",
+      "start": 2.08,
+      "end": 2.5
+    },
+    {
+      "text": "don't",
+      "start": 2.5,
+      "end": 2.72
+    },
+    {
+      "text": "know,",
+      "start": 2.72,
+      "end": 2.88
+    },
+    {
+      "text": "it's",
+      "start": 2.88,
+      "end": 3.18
+    },
+    {
+      "text": "not",
+      "start": 3.18,
+      "end": 3.2
+    },
+    {
+      "text": "Oprah.",
+      "start": 3.2,
+      "end": 3.4
+    },
+    {
+      "text": "Today",
+      "start": 3.5,
+      "end": 3.78
+    },
+    {
+      "text": "we're",
+      "start": 3.78,
+      "end": 4.1
+    },
+    {
+      "text": "playing",
+      "start": 4.1,
+      "end": 4.28
+    },
+    {
+      "text": "Who",
+      "start": 4.28,
+      "end": 4.58
+    },
+    {
+      "text": "Said",
+      "start": 4.58,
+      "end": 4.76
+    },
+    {
+      "text": "It.",
+      "start": 4.76,
+      "end": 5.0
+    },
+    {
+      "text": "Lord,",
+      "start": 5.16,
+      "end": 5.3
+    },
+    {
+      "text": "do",
+      "start": 5.52,
+      "end": 5.68
+    },
+    {
+      "text": "not",
+      "start": 5.68,
+      "end": 5.82
+    },
+    {
+      "text": "hold",
+      "start": 5.82,
+      "end": 6.06
+    },
+    {
+      "text": "this",
+      "start": 6.06,
+      "end": 6.4
+    },
+    {
+      "text": "sin",
+      "start": 6.4,
+      "end": 6.6
+    },
+    {
+      "text": "against",
+      "start": 6.6,
+      "end": 7.08
+    },
+    {
+      "text": "them.",
+      "start": 7.08,
+      "end": 7.4
+    },
+    {
+      "text": "You",
+      "start": 7.86,
+      "end": 7.96
+    },
+    {
+      "text": "have",
+      "start": 7.96,
+      "end": 8.04
+    },
+    {
+      "text": "four",
+      "start": 8.04,
+      "end": 8.28
+    },
+    {
+      "text": "options.",
+      "start": 8.28,
+      "end": 8.5
+    },
+    {
+      "text": "Stephen?",
+      "start": 8.62,
+      "end": 9.1
+    },
+    {
+      "text": "Stephen.",
+      "start": 9.5,
+      "end": 9.58
+    },
+    {
+      "text": "Stephen,",
+      "start": 9.58,
+      "end": 9.82
+    },
+    {
+      "text": "yeah?",
+      "start": 10.14,
+      "end": 10.2
+    },
+    {
+      "text": "Peter,",
+      "start": 10.32,
+      "end": 10.66
+    },
+    {
+      "text": "James",
+      "start": 11.1,
+      "end": 11.44
+    },
+    {
+      "text": "and",
+      "start": 11.44,
+      "end": 11.8
+    },
+    {
+      "text": "Paul.",
+      "start": 11.8,
+      "end": 12.0
+    },
+    {
+      "text": "Paul",
+      "start": 12.14,
+      "end": 12.76
+    },
+    {
+      "text": "is",
+      "start": 12.76,
+      "end": 13.18
+    },
+    {
+      "text": "incorrect,",
+      "start": 13.18,
+      "end": 13.76
+    },
+    {
+      "text": "Stephen",
+      "start": 14.14,
+      "end": 14.4
+    },
+    {
+      "text": "is",
+      "start": 14.4,
+      "end": 14.84
+    },
+    {
+      "text": "correct.",
+      "start": 14.84,
+      "end": 15.05
+    },
+    {
+      "text": "The",
+      "start": 15.17,
+      "end": 15.19
+    },
+    {
+      "text": "phrase",
+      "start": 15.19,
+      "end": 15.43
+    },
+    {
+      "text": "goes,",
+      "start": 15.43,
+      "end": 15.87
+    },
+    {
+      "text": "and",
+      "start": 16.51,
+      "end": 16.67
+    },
+    {
+      "text": "who",
+      "start": 16.67,
+      "end": 16.93
+    },
+    {
+      "text": "knows",
+      "start": 16.93,
+      "end": 17.43
+    },
+    {
+      "text": "but",
+      "start": 17.43,
+      "end": 18.03
+    },
+    {
+      "text": "that",
+      "start": 18.03,
+      "end": 18.51
+    },
+    {
+      "text": "you",
+      "start": 18.51,
+      "end": 19.15
+    },
+    {
+      "text": "have",
+      "start": 19.15,
+      "end": 19.51
+    },
+    {
+      "text": "come",
+      "start": 19.51,
+      "end": 19.79
+    },
+    {
+      "text": "to",
+      "start": 19.79,
+      "end": 20.01
+    },
+    {
+      "text": "your",
+      "start": 20.01,
+      "end": 20.29
+    },
+    {
+      "text": "royal",
+      "start": 20.29,
+      "end": 20.53
+    },
+    {
+      "text": "position",
+      "start": 20.53,
+      "end": 21.09
+    },
+    {
+      "text": "for",
+      "start": 21.09,
+      "end": 21.65
+    },
+    {
+      "text": "such",
+      "start": 21.65,
+      "end": 21.85
+    },
+    {
+      "text": "time",
+      "start": 21.85,
+      "end": 22.35
+    },
+    {
+      "text": "as",
+      "start": 22.35,
+      "end": 23.11
+    },
+    {
+      "text": "this.",
+      "start": 23.11,
+      "end": 23.57
+    },
+    {
+      "text": "You",
+      "start": 23.7,
+      "end": 23.7
+    },
+    {
+      "text": "have",
+      "start": 23.7,
+      "end": 23.72
+    },
+    {
+      "text": "four",
+      "start": 23.72,
+      "end": 23.98
+    },
+    {
+      "text": "options.",
+      "start": 23.98,
+      "end": 24.82
+    },
+    {
+      "text": "Mordecai,",
+      "start": 25.5,
+      "end": 26.58
+    },
+    {
+      "text": "Esther,",
+      "start": 26.86,
+      "end": 27.32
+    },
+    {
+      "text": "King",
+      "start": 27.94,
+      "end": 28.32
+    },
+    {
+      "text": "Xerxes",
+      "start": 28.32,
+      "end": 28.92
+    },
+    {
+      "text": "and",
+      "start": 28.92,
+      "end": 30.16
+    },
+    {
+      "text": "Haman.",
+      "start": 30.16,
+      "end": 30.5
+    },
+    {
+      "text": "Mordecai?",
+      "start": 30.73,
+      "end": 31.43
+    },
+    {
+      "text": "Matimba?",
+      "start": 31.63,
+      "end": 32.77
+    },
+    {
+      "text": "King",
+      "start": 33.59,
+      "end": 33.85
+    },
+    {
+      "text": "Xerxes.",
+      "start": 33.85,
+      "end": 34.45
+    },
+    {
+      "text": "King",
+      "start": 35.33,
+      "end": 35.71
+    },
+    {
+      "text": "Xerxes",
+      "start": 35.71,
+      "end": 36.13
+    },
+    {
+      "text": "is",
+      "start": 36.13,
+      "end": 36.67
+    },
+    {
+      "text": "incorrect.",
+      "start": 36.67,
+      "end": 36.83
+    },
+    {
+      "text": "Who",
+      "start": 36.83,
+      "end": 37.95
+    },
+    {
+      "text": "said",
+      "start": 37.95,
+      "end": 38.25
+    },
+    {
+      "text": "it?",
+      "start": 38.25,
+      "end": 39.13
+    },
+    {
+      "text": "Where",
+      "start": 39.81,
+      "end": 39.81
+    },
+    {
+      "text": "you",
+      "start": 39.81,
+      "end": 40.01
+    },
+    {
+      "text": "go,",
+      "start": 40.01,
+      "end": 40.41
+    },
+    {
+      "text": "I",
+      "start": 40.55,
+      "end": 40.77
+    },
+    {
+      "text": "will",
+      "start": 40.77,
+      "end": 40.97
+    },
+    {
+      "text": "go",
+      "start": 40.97,
+      "end": 41.33
+    },
+    {
+      "text": "And",
+      "start": 41.33,
+      "end": 41.69
+    },
+    {
+      "text": "where",
+      "start": 41.69,
+      "end": 41.85
+    },
+    {
+      "text": "you",
+      "start": 41.85,
+      "end": 42.13
+    },
+    {
+      "text": "stay,",
+      "start": 42.13,
+      "end": 42.45
+    },
+    {
+      "text": "I",
+      "start": 42.95,
+      "end": 43.07
+    },
+    {
+      "text": "will",
+      "start": 43.07,
+      "end": 43.29
+    },
+    {
+      "text": "stay",
+      "start": 43.29,
+      "end": 43.81
+    },
+    {
+      "text": "Four",
+      "start": 43.81,
+      "end": 44.23
+    },
+    {
+      "text": "Oprah?",
+      "start": 44.33,
+      "end": 44.77
+    },
+    {
+      "text": "Is",
+      "start": 45.13,
+      "end": 45.13
+    },
+    {
+      "text": "it",
+      "start": 45.13,
+      "end": 45.35
+    },
+    {
+      "text": "Oprah?",
+      "start": 45.35,
+      "end": 46.09
+    },
+    {
+      "text": "Oprah?",
+      "start": 46.33,
+      "end": 46.35
+    },
+    {
+      "text": "I",
+      "start": 46.35,
+      "end": 46.77
+    },
+    {
+      "text": "don't",
+      "start": 46.77,
+      "end": 46.99
+    },
+    {
+      "text": "know,",
+      "start": 46.99,
+      "end": 47.15
+    },
+    {
+      "text": "it's",
+      "start": 47.15,
+      "end": 47.45
+    },
+    {
+      "text": "not",
+      "start": 47.45,
+      "end": 47.47
+    },
+    {
+      "text": "Oprah.",
+      "start": 47.47,
+      "end": 47.95
+    },
+    {
+      "text": "Oprah,",
+      "start": 48.11,
+      "end": 48.45
+    },
+    {
+      "text": "yeah,",
+      "start": 48.53,
+      "end": 48.73
+    },
+    {
+      "text": "sorry.",
+      "start": 48.73,
+      "end": 49.05
+    },
+    {
+      "text": "Is",
+      "start": 49.29,
+      "end": 49.29
+    },
+    {
+      "text": "it",
+      "start": 49.29,
+      "end": 49.39
+    },
+    {
+      "text": "Oprah?",
+      "start": 49.39,
+      "end": 49.85
+    },
+    {
+      "text": "Dyslexia.",
+      "start": 50.43,
+      "end": 51.03
+    },
+    {
+      "text": "Oprah,",
+      "start": 51.24,
+      "end": 51.78
+    },
+    {
+      "text": "Ruth,",
+      "start": 52.08,
+      "end": 52.44
+    },
+    {
+      "text": "Esther,",
+      "start": 52.88,
+      "end": 53.1
+    },
+    {
+      "text": "and",
+      "start": 53.3,
+      "end": 53.48
+    },
+    {
+      "text": "Naomi.",
+      "start": 53.48,
+      "end": 53.72
+    },
+    {
+      "text": "Who",
+      "start": 53.8,
+      "end": 53.98
+    },
+    {
+      "text": "said",
+      "start": 53.98,
+      "end": 54.16
+    },
+    {
+      "text": "it?",
+      "start": 54.16,
+      "end": 54.32
+    },
+    {
+      "text": "Esther.",
+      "start": 54.54,
+      "end": 55.14
+    },
+    {
+      "text": "Ha!",
+      "start": 55.76,
+      "end": 56.2
+    },
+    {
+      "text": "Yes!",
+      "start": 56.42,
+      "end": 56.7
+    },
+    {
+      "text": "Esther",
+      "start": 56.96,
+      "end": 57.56
+    },
+    {
+      "text": "is",
+      "start": 57.56,
+      "end": 58.16
+    },
+    {
+      "text": "incorrect.",
+      "start": 58.16,
+      "end": 58.96
+    },
+    {
+      "text": "Ruth",
+      "start": 59.24,
+      "end": 59.8
+    },
+    {
+      "text": "is",
+      "start": 59.8,
+      "end": 60.54
+    },
+    {
+      "text": "correct.",
+      "start": 60.54,
+      "end": 60.78
+    },
+    {
+      "text": "Yay!",
+      "start": 61.14,
+      "end": 61.5
+    },
+    {
+      "text": "The",
+      "start": 61.62,
+      "end": 62.38
+    },
+    {
+      "text": "score",
+      "start": 62.38,
+      "end": 62.64
+    },
+    {
+      "text": "is",
+      "start": 62.64,
+      "end": 63.3
+    },
+    {
+      "text": "2–1.",
+      "start": 63.3,
+      "end": 63.9
+    },
+    {
+      "text": "Who",
+      "start": 64.32,
+      "end": 65.16
+    },
+    {
+      "text": "said",
+      "start": 65.16,
+      "end": 65.5
+    },
+    {
+      "text": "it?",
+      "start": 65.5,
+      "end": 66.18
+    },
+    {
+      "text": "Surely",
+      "start": 66.56,
+      "end": 66.9
+    },
+    {
+      "text": "this",
+      "start": 66.9,
+      "end": 67.42
+    },
+    {
+      "text": "man",
+      "start": 67.42,
+      "end": 67.68
+    },
+    {
+      "text": "was",
+      "start": 67.68,
+      "end": 68.0
+    },
+    {
+      "text": "the",
+      "start": 68.0,
+      "end": 68.24
+    },
+    {
+      "text": "Son",
+      "start": 68.24,
+      "end": 68.72
+    },
+    {
+      "text": "of",
+      "start": 68.72,
+      "end": 69.1
+    },
+    {
+      "text": "God.",
+      "start": 69.1,
+      "end": 69.62
+    },
+    {
+      "text": "Four",
+      "start": 70.42,
+      "end": 70.6
+    },
+    {
+      "text": "options.",
+      "start": 70.6,
+      "end": 71.02
+    },
+    {
+      "text": "Thomas,",
+      "start": 71.58,
+      "end": 72.42
+    },
+    {
+      "text": "Pontius",
+      "start": 73.48,
+      "end": 73.76
+    },
+    {
+      "text": "Pilate,",
+      "start": 73.76,
+      "end": 74.78
+    },
+    {
+      "text": "A",
+      "start": 74.78,
+      "end": 75.36
+    },
+    {
+      "text": "Roman",
+      "start": 75.36,
+      "end": 75.92
+    },
+    {
+      "text": "centurion",
+      "start": 75.92,
+      "end": 76.8
+    },
+    {
+      "text": "and",
+      "start": 76.8,
+      "end": 77.26
+    },
+    {
+      "text": "Peter",
+      "start": 77.26,
+      "end": 77.7
+    },
+    {
+      "text": "Roman",
+      "start": 77.78,
+      "end": 78.6
+    },
+    {
+      "text": "centurion?",
+      "start": 78.6,
+      "end": 79.5
+    },
+    {
+      "text": "Yes!",
+      "start": 79.96,
+      "end": 80.3
+    },
+    {
+      "text": "Thomas!",
+      "start": 80.4,
+      "end": 81.0
+    },
+    {
+      "text": "Ok,",
+      "start": 81.1,
+      "end": 81.7
+    },
+    {
+      "text": "Roman",
+      "start": 82.48,
+      "end": 82.72
+    },
+    {
+      "text": "centurion",
+      "start": 82.72,
+      "end": 83.5
+    },
+    {
+      "text": "Roman",
+      "start": 83.5,
+      "end": 84.5
+    },
+    {
+      "text": "centurion",
+      "start": 84.5,
+      "end": 85.46
+    },
+    {
+      "text": "is",
+      "start": 85.46,
+      "end": 85.78
+    },
+    {
+      "text": "correct",
+      "start": 85.78,
+      "end": 86.78
+    },
+    {
+      "text": "Thomas",
+      "start": 86.78,
+      "end": 87.7
+    },
+    {
+      "text": "is",
+      "start": 87.7,
+      "end": 88.2
+    },
+    {
+      "text": "incorrect",
+      "start": 88.2,
+      "end": 89.0
+    },
+    {
+      "text": "The",
+      "start": 89.0,
+      "end": 89.74
+    },
+    {
+      "text": "score",
+      "start": 89.74,
+      "end": 89.86
+    },
+    {
+      "text": "is",
+      "start": 89.86,
+      "end": 90.64
+    },
+    {
+      "text": "3–1",
+      "start": 90.64,
+      "end": 91.02
+    },
+    {
+      "text": "Who",
+      "start": 91.33,
+      "end": 93.33
+    },
+    {
+      "text": "said",
+      "start": 93.33,
+      "end": 93.57
+    },
+    {
+      "text": "it?",
+      "start": 93.57,
+      "end": 94.49
+    },
+    {
+      "text": "Am",
+      "start": 94.97,
+      "end": 95.13
+    },
+    {
+      "text": "I",
+      "start": 95.13,
+      "end": 95.49
+    },
+    {
+      "text": "my",
+      "start": 95.49,
+      "end": 95.81
+    },
+    {
+      "text": "brother's",
+      "start": 95.81,
+      "end": 96.49
+    },
+    {
+      "text": "keeper?",
+      "start": 96.49,
+      "end": 96.85
+    },
+    {
+      "text": "Four",
+      "start": 98.53,
+      "end": 99.57
+    },
+    {
+      "text": "options.",
+      "start": 99.57,
+      "end": 100.45
+    },
+    {
+      "text": "Adam,",
+      "start": 101.91,
+      "end": 102.09
+    },
+    {
+      "text": "Esau,",
+      "start": 103.23,
+      "end": 104.15
+    },
+    {
+      "text": "Abel",
+      "start": 104.63,
+      "end": 105.19
+    },
+    {
+      "text": "or",
+      "start": 105.19,
+      "end": 105.59
+    },
+    {
+      "text": "Cain?",
+      "start": 105.59,
+      "end": 105.81
+    },
+    {
+      "text": "Cain.",
+      "start": 106.01,
+      "end": 106.91
+    },
+    {
+      "text": "Yes!",
+      "start": 108.15,
+      "end": 108.53
+    },
+    {
+      "text": "Let's",
+      "start": 108.59,
+      "end": 109.45
+    },
+    {
+      "text": "start",
+      "start": 109.45,
+      "end": 109.45
+    },
+    {
+      "text": "with",
+      "start": 109.45,
+      "end": 109.65
+    },
+    {
+      "text": "Abel.",
+      "start": 109.65,
+      "end": 109.83
+    },
+    {
+      "text": "It's",
+      "start": 109.95,
+      "end": 110.69
+    },
+    {
+      "text": "Cain.",
+      "start": 110.69,
+      "end": 110.93
+    },
+    {
+      "text": "We",
+      "start": 111.49,
+      "end": 111.49
+    },
+    {
+      "text": "know",
+      "start": 111.49,
+      "end": 111.71
+    },
+    {
+      "text": "it's",
+      "start": 111.71,
+      "end": 111.89
+    },
+    {
+      "text": "Cain.",
+      "start": 111.89,
+      "end": 112.17
+    },
+    {
+      "text": "And",
+      "start": 112.17,
+      "end": 113.31
+    },
+    {
+      "text": "the",
+      "start": 113.31,
+      "end": 113.61
+    },
+    {
+      "text": "correct",
+      "start": 113.61,
+      "end": 113.81
+    },
+    {
+      "text": "answer",
+      "start": 113.81,
+      "end": 114.15
+    },
+    {
+      "text": "is",
+      "start": 114.15,
+      "end": 115.07
+    },
+    {
+      "text": "Cain.",
+      "start": 115.07,
+      "end": 115.43
+    },
+    {
+      "text": "Who",
+      "start": 115.43,
+      "end": 117.17
+    },
+    {
+      "text": "said",
+      "start": 117.17,
+      "end": 118.71
+    },
+    {
+      "text": "it?",
+      "start": 118.71,
+      "end": 119.33
+    },
+    {
+      "text": "I",
+      "start": 120.51,
+      "end": 120.63
+    },
+    {
+      "text": "am",
+      "start": 120.63,
+      "end": 120.89
+    },
+    {
+      "text": "the",
+      "start": 120.89,
+      "end": 121.13
+    },
+    {
+      "text": "Lord's",
+      "start": 121.13,
+      "end": 121.89
+    },
+    {
+      "text": "servant.",
+      "start": 121.89,
+      "end": 122.45
+    },
+    {
+      "text": "May",
+      "start": 123.07,
+      "end": 123.17
+    },
+    {
+      "text": "your",
+      "start": 123.17,
+      "end": 123.51
+    },
+    {
+      "text": "word",
+      "start": 123.51,
+      "end": 124.09
+    },
+    {
+      "text": "to",
+      "start": 124.09,
+      "end": 125.13
+    },
+    {
+      "text": "me",
+      "start": 125.13,
+      "end": 125.79
+    },
+    {
+      "text": "be",
+      "start": 125.79,
+      "end": 126.33
+    },
+    {
+      "text": "fulfilled.",
+      "start": 126.33,
+      "end": 126.43
+    },
+    {
+      "text": "Four",
+      "start": 126.61,
+      "end": 126.69
+    },
+    {
+      "text": "options.",
+      "start": 126.69,
+      "end": 127.35
+    },
+    {
+      "text": "Elizabeth,",
+      "start": 127.93,
+      "end": 128.55
+    },
+    {
+      "text": "Mary,",
+      "start": 129.85,
+      "end": 130.15
+    },
+    {
+      "text": "Mother",
+      "start": 130.39,
+      "end": 130.57
+    },
+    {
+      "text": "of",
+      "start": 130.57,
+      "end": 130.77
+    },
+    {
+      "text": "Jesus,",
+      "start": 130.77,
+      "end": 131.33
+    },
+    {
+      "text": "Anna,",
+      "start": 132.51,
+      "end": 132.83
+    },
+    {
+      "text": "or",
+      "start": 133.51,
+      "end": 134.35
+    },
+    {
+      "text": "Hannah.",
+      "start": 134.35,
+      "end": 134.57
+    },
+    {
+      "text": "Hannah,",
+      "start": 134.7,
+      "end": 135.24
+    },
+    {
+      "text": "Mary.",
+      "start": 135.84,
+      "end": 136.1
+    },
+    {
+      "text": "Okay,",
+      "start": 136.18,
+      "end": 136.18
+    },
+    {
+      "text": "let's",
+      "start": 136.2,
+      "end": 136.46
+    },
+    {
+      "text": "see.",
+      "start": 136.46,
+      "end": 136.74
+    },
+    {
+      "text": "Hannah.",
+      "start": 137.66,
+      "end": 138.32
+    },
+    {
+      "text": "It's",
+      "start": 138.32,
+      "end": 138.64
+    },
+    {
+      "text": "going",
+      "start": 138.64,
+      "end": 138.78
+    },
+    {
+      "text": "on",
+      "start": 138.78,
+      "end": 139.02
+    },
+    {
+      "text": "social",
+      "start": 139.02,
+      "end": 139.3
+    },
+    {
+      "text": "media.",
+      "start": 139.3,
+      "end": 139.4
+    },
+    {
+      "text": "Hannah",
+      "start": 139.48,
+      "end": 139.74
+    },
+    {
+      "text": "is",
+      "start": 139.74,
+      "end": 140.12
+    },
+    {
+      "text": "incorrect.",
+      "start": 140.12,
+      "end": 140.66
+    },
+    {
+      "text": "Mary,",
+      "start": 141.54,
+      "end": 141.7
+    },
+    {
+      "text": "Mother",
+      "start": 141.7,
+      "end": 142.08
+    },
+    {
+      "text": "of",
+      "start": 142.08,
+      "end": 142.32
+    },
+    {
+      "text": "Who",
+      "start": 142.37,
+      "end": 144.07
+    },
+    {
+      "text": "said",
+      "start": 144.07,
+      "end": 144.37
+    },
+    {
+      "text": "it?",
+      "start": 144.37,
+      "end": 145.67
+    },
+    {
+      "text": "Meaningless,",
+      "start": 146.01,
+      "end": 146.41
+    },
+    {
+      "text": "meaningless,",
+      "start": 147.25,
+      "end": 147.25
+    },
+    {
+      "text": "utterly",
+      "start": 147.53,
+      "end": 147.77
+    },
+    {
+      "text": "meaningless.",
+      "start": 147.77,
+      "end": 148.31
+    },
+    {
+      "text": "Everything",
+      "start": 148.77,
+      "end": 149.21
+    },
+    {
+      "text": "is",
+      "start": 149.21,
+      "end": 149.89
+    },
+    {
+      "text": "meaningless.",
+      "start": 149.89,
+      "end": 150.07
+    },
+    {
+      "text": "Job?",
+      "start": 150.16,
+      "end": 150.62
+    },
+    {
+      "text": "The",
+      "start": 153.1,
+      "end": 153.44
+    },
+    {
+      "text": "Teacher?",
+      "start": 153.44,
+      "end": 154.16
+    },
+    {
+      "text": "Jonah?",
+      "start": 155.88,
+      "end": 156.18
+    },
+    {
+      "text": "Or",
+      "start": 157.44,
+      "end": 157.48
+    },
+    {
+      "text": "Jeremiah?",
+      "start": 157.48,
+      "end": 157.9
+    },
+    {
+      "text": "Teacher.",
+      "start": 158.07,
+      "end": 158.67
+    },
+    {
+      "text": "Aaah!",
+      "start": 158.67,
+      "end": 159.23
+    },
+    {
+      "text": "The",
+      "start": 159.43,
+      "end": 159.59
+    },
+    {
+      "text": "Teacher?",
+      "start": 159.59,
+      "end": 159.93
+    },
+    {
+      "text": "Job?",
+      "start": 159.99,
+      "end": 160.49
+    },
+    {
+      "text": "Job",
+      "start": 160.77,
+      "end": 161.93
+    },
+    {
+      "text": "is",
+      "start": 161.93,
+      "end": 162.21
+    },
+    {
+      "text": "incorrect.",
+      "start": 162.21,
+      "end": 162.63
+    },
+    {
+      "text": "The",
+      "start": 163.27,
+      "end": 163.43
+    },
+    {
+      "text": "Teacher",
+      "start": 163.43,
+      "end": 163.97
+    },
+    {
+      "text": "is",
+      "start": 163.97,
+      "end": 164.73
+    },
+    {
+      "text": "correct.",
+      "start": 164.73,
+      "end": 164.93
+    },
+    {
+      "text": "Who",
+      "start": 164.97,
+      "end": 165.69
+    },
+    {
+      "text": "said",
+      "start": 165.69,
+      "end": 166.41
+    },
+    {
+      "text": "it?",
+      "start": 166.41,
+      "end": 166.57
+    },
+    {
+      "text": "You",
+      "start": 167.57,
+      "end": 167.67
+    },
+    {
+      "text": "are",
+      "start": 167.67,
+      "end": 167.89
+    },
+    {
+      "text": "the",
+      "start": 167.89,
+      "end": 168.11
+    },
+    {
+      "text": "Messiah.",
+      "start": 168.11,
+      "end": 168.61
+    },
+    {
+      "text": "The",
+      "start": 169.09,
+      "end": 169.37
+    },
+    {
+      "text": "Son",
+      "start": 169.37,
+      "end": 169.73
+    },
+    {
+      "text": "of",
+      "start": 169.73,
+      "end": 170.01
+    },
+    {
+      "text": "the",
+      "start": 170.01,
+      "end": 170.17
+    },
+    {
+      "text": "living",
+      "start": 170.17,
+      "end": 170.43
+    },
+    {
+      "text": "God.",
+      "start": 170.43,
+      "end": 170.93
+    },
+    {
+      "text": "Four",
+      "start": 171.39,
+      "end": 171.55
+    },
+    {
+      "text": "options.",
+      "start": 171.55,
+      "end": 172.17
+    },
+    {
+      "text": "John,",
+      "start": 172.85,
+      "end": 173.35
+    },
+    {
+      "text": "Peter,",
+      "start": 173.97,
+      "end": 174.45
+    },
+    {
+      "text": "Andrew,",
+      "start": 175.19,
+      "end": 175.75
+    },
+    {
+      "text": "James.",
+      "start": 176.35,
+      "end": 176.69
+    },
+    {
+      "text": "It's",
+      "start": 176.69,
+      "end": 176.89
+    },
+    {
+      "text": "Peter,",
+      "start": 176.89,
+      "end": 177.25
+    },
+    {
+      "text": "we'll",
+      "start": 177.49,
+      "end": 177.81
+    },
+    {
+      "text": "go",
+      "start": 177.81,
+      "end": 177.99
+    },
+    {
+      "text": "for",
+      "start": 177.99,
+      "end": 178.17
+    },
+    {
+      "text": "the",
+      "start": 178.17,
+      "end": 178.25
+    },
+    {
+      "text": "next",
+      "start": 178.25,
+      "end": 178.43
+    },
+    {
+      "text": "round.",
+      "start": 178.43,
+      "end": 178.95
+    },
+    {
+      "text": "Nice",
+      "start": 178.97,
+      "end": 179.51
+    },
+    {
+      "text": "guys,",
+      "start": 179.51,
+      "end": 180.07
+    },
+    {
+      "text": "very",
+      "start": 180.25,
+      "end": 180.49
+    },
+    {
+      "text": "impressive.",
+      "start": 180.49,
+      "end": 180.73
+    },
+    {
+      "text": "Who",
+      "start": 180.79,
+      "end": 180.99
+    },
+    {
+      "text": "said",
+      "start": 180.99,
+      "end": 181.31
+    },
+    {
+      "text": "it?",
+      "start": 181.31,
+      "end": 182.29
+    },
+    {
+      "text": "Here",
+      "start": 183.21,
+      "end": 183.51
+    },
+    {
+      "text": "am",
+      "start": 183.51,
+      "end": 183.81
+    },
+    {
+      "text": "I,",
+      "start": 183.81,
+      "end": 184.37
+    },
+    {
+      "text": "send",
+      "start": 184.67,
+      "end": 184.99
+    },
+    {
+      "text": "me.",
+      "start": 184.99,
+      "end": 185.71
+    },
+    {
+      "text": "Four",
+      "start": 186.13,
+      "end": 186.29
+    },
+    {
+      "text": "options.",
+      "start": 186.29,
+      "end": 186.95
+    },
+    {
+      "text": "Samuel,",
+      "start": 188.29,
+      "end": 189.31
+    },
+    {
+      "text": "Isaiah,",
+      "start": 190.39,
+      "end": 190.95
+    },
+    {
+      "text": "Moses",
+      "start": 191.71,
+      "end": 192.23
+    },
+    {
+      "text": "and",
+      "start": 192.23,
+      "end": 192.89
+    },
+    {
+      "text": "Jeremiah.",
+      "start": 192.89,
+      "end": 193.13
+    },
+    {
+      "text": "Who",
+      "start": 193.23,
+      "end": 193.69
+    },
+    {
+      "text": "locked",
+      "start": 193.69,
+      "end": 193.87
+    },
+    {
+      "text": "in",
+      "start": 193.87,
+      "end": 194.01
+    },
+    {
+      "text": "your",
+      "start": 194.01,
+      "end": 194.15
+    },
+    {
+      "text": "answer?",
+      "start": 194.15,
+      "end": 194.33
+    },
+    {
+      "text": "So",
+      "start": 194.45,
+      "end": 195.59
+    },
+    {
+      "text": "you",
+      "start": 195.59,
+      "end": 195.75
+    },
+    {
+      "text": "said",
+      "start": 195.75,
+      "end": 195.89
+    },
+    {
+      "text": "you",
+      "start": 195.89,
+      "end": 196.35
+    },
+    {
+      "text": "said",
+      "start": 196.35,
+      "end": 196.55
+    },
+    {
+      "text": "Isaiah",
+      "start": 196.55,
+      "end": 196.93
+    },
+    {
+      "text": "Did",
+      "start": 197.01,
+      "end": 197.41
+    },
+    {
+      "text": "you",
+      "start": 197.41,
+      "end": 197.59
+    },
+    {
+      "text": "say",
+      "start": 197.59,
+      "end": 197.75
+    },
+    {
+      "text": "Isaiah",
+      "start": 197.75,
+      "end": 198.55
+    },
+    {
+      "text": "Isaiah",
+      "start": 198.55,
+      "end": 199.09
+    },
+    {
+      "text": "is",
+      "start": 199.09,
+      "end": 199.21
+    },
+    {
+      "text": "the",
+      "start": 199.21,
+      "end": 199.47
+    },
+    {
+      "text": "correct",
+      "start": 199.47,
+      "end": 199.63
+    },
+    {
+      "text": "answer",
+      "start": 199.63,
+      "end": 199.93
+    }
+  ],
+  "stamps": [
+    {
+      "at": 0.2,
+      "text": "The Decider",
+      "tone": "gold",
+      "duration": 3.1
+    },
+    {
+      "at": 14.4,
+      "text": "Gents score!",
+      "tone": "green",
+      "duration": 1.2
+    },
+    {
+      "at": 36.529999999999994,
+      "text": "Ladies score!",
+      "tone": "gold",
+      "duration": 1.2
+    },
+    {
+      "at": 59.5,
+      "text": "Gents score!",
+      "tone": "green",
+      "duration": 1.2
+    },
+    {
+      "at": 83.8,
+      "text": "Gents score!",
+      "tone": "green",
+      "duration": 1.2
+    },
+    {
+      "at": 141.8,
+      "text": "Ladies score!",
+      "tone": "gold",
+      "duration": 1.2
+    },
+    {
+      "at": 163.53,
+      "text": "Gents score!",
+      "tone": "green",
+      "duration": 1.2
+    }
+  ]
+}
