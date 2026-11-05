@@ -148,7 +148,7 @@ def main():
         "intro": "Series tied 1–1. This one decides it…",
         "rules": {**rules, "lines": ["One Lady vs one Gent", "A famous Bible quote, four names", "Pick who said it", "Right answer = 1 point"]},
         "matchups": matchups, "video": f"footage/{NAME}.mp4", "durationInSeconds": end,
-        "boardTop": 440, "boardScale": 0.84, "captionY": 1560, "captions": caps,
+        "boardTop": 400, "boardScale": 0.8, "captionY": 1560, "captions": caps,
         "stamps": [{"at": 0.2, "text": "The Decider", "tone": "gold", "duration": round(starts[1] - 0.3, 2)}] + stamps,
     }
     json.dump(props, open(os.path.join(HERE, "who-said-it.json"), "w"), indent=2, ensure_ascii=False)

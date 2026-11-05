@@ -1,9 +1,9 @@
 {
   "_doc": "Who Said It?, Ladies vs Gents decider, 4 Nov 2026. Times are source seconds in each clip. build.py turns this into the cut list and props.",
   "zoom": [
-    1.35,
+    1.2,
     0.5,
-    0.72
+    0.0
   ],
   "matchup5CainBy": 1,
   "rounds": [
